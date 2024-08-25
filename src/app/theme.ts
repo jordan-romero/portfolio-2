@@ -1,5 +1,3 @@
-// app/theme.ts
-
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 
 const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
@@ -9,9 +7,13 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
       ? {
           primary: {
             main: '#7b8cde',
+            light: '#9eadf0',
+            dark: '#5a6cb0',
           },
           secondary: {
             main: '#82d4bb',
+            light: '#a0f0d8',
+            dark: '#64a690',
           },
           background: {
             default: '#eee5e9',
@@ -19,14 +21,31 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           text: {
             primary: '#363230',
+            secondary: '#5c5552',
+          },
+          error: {
+            main: '#d32f2f',
+          },
+          warning: {
+            main: '#ffa000',
+          },
+          info: {
+            main: '#1976d2',
+          },
+          success: {
+            main: '#388e3c',
           },
         }
       : {
           primary: {
             main: '#9eadf0',
+            light: '#c1cbff',
+            dark: '#7b8cde',
           },
           secondary: {
             main: '#a0f0d8',
+            light: '#c3ffff',
+            dark: '#82d4bb',
           },
           background: {
             default: '#1a1a1a',
@@ -34,16 +53,33 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           text: {
             primary: '#ffffff',
+            secondary: '#b0b0b0',
+          },
+          error: {
+            main: '#f44336',
+          },
+          warning: {
+            main: '#ffa726',
+          },
+          info: {
+            main: '#29b6f6',
+          },
+          success: {
+            main: '#66bb6a',
           },
         }),
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontSize: '2.5rem',
-      fontWeight: 500,
+      fontSize: '3rem',
+      fontWeight: 700,
     },
     h2: {
+      fontSize: '2.5rem',
+      fontWeight: 600,
+    },
+    h3: {
       fontSize: '2rem',
       fontWeight: 500,
     },

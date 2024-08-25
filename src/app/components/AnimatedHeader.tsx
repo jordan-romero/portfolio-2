@@ -1,4 +1,3 @@
-// app/components/AnimatedHeader.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -9,90 +8,136 @@ export const AnimatedHeader: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const [isComplete, setIsComplete] = useState(false);
 
   const theme = useTheme();
 
-  const staticText = 'Hi, my name is Jordan Romero';
-  const dynamicText = 'Full Stack Engineer who is ';
+  const staticText = 'Hello. My name is';
+  const name = 'Jordan Romero';
+  const roleText = 'I am a';
+  const role = '<Full Stack Developer />';
+  const dynamicPrefix = 'I believe in';
   const dynamicWords = [
-    'versatile',
-    'thoughtful',
-    'inclusive',
-    'innovative',
-    'collaborative',
+    'adaptability',
+    'innovation',
+    'transparency',
+    'analytical thinking',
   ];
-  const finalWord = 'adaptable';
+  const finalWord = 'collaboration';
 
   useEffect(() => {
     const handleTyping = () => {
-      const fullStaticText = `${staticText}. ${dynamicText}`;
-      const current = loopNum % (dynamicWords.length + 1);
-      const currentWord =
-        current === dynamicWords.length ? finalWord : dynamicWords[current];
+      if (isComplete) return;
 
-      if (!isDeleting && text === fullStaticText + currentWord) {
-        if (current === dynamicWords.length) {
-          return; // Stop at the final word
+      if (loopNum === dynamicWords.length) {
+        const fullText = `${dynamicPrefix} ${finalWord}`;
+        if (text === fullText) {
+          setIsComplete(true);
+          return;
         }
-        setIsDeleting(true);
-        setTypingSpeed(100);
-      } else if (isDeleting && text === fullStaticText) {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-        setTypingSpeed(150);
+        setText(fullText.substring(0, text.length + 1));
+      } else {
+        const current = loopNum % dynamicWords.length;
+        const fullText = `${dynamicPrefix} ${dynamicWords[current]}`;
+
+        if (!isDeleting && text === fullText) {
+          setIsDeleting(true);
+          setTypingSpeed(100);
+        } else if (isDeleting && text === dynamicPrefix + ' ') {
+          setIsDeleting(false);
+          setLoopNum(loopNum + 1);
+          setTypingSpeed(150);
+        }
+
+        setText(
+          isDeleting
+            ? text.substring(0, text.length - 1)
+            : fullText.substring(0, text.length + 1)
+        );
       }
-
-      setText((prevText) => {
-        if (isDeleting) {
-          return prevText.substring(0, prevText.length - 1);
-        } else if (prevText.length < fullStaticText.length) {
-          return fullStaticText.substring(0, prevText.length + 1);
-        } else {
-          return (
-            fullStaticText +
-            currentWord.substring(
-              0,
-              prevText.length - fullStaticText.length + 1
-            )
-          );
-        }
-      });
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed]);
+  }, [text, isDeleting, loopNum, typingSpeed, isComplete]);
+
+  const renderDynamicText = () => {
+    const parts = text.split(' ');
+    const prefix = parts.slice(0, 3).join(' ');
+    const dynamicWord = parts.slice(3).join(' ');
+
+    return (
+      <>
+        {prefix}{' '}
+        <span
+          style={{ color: theme.palette.secondary.main, fontWeight: 'bold' }}
+        >
+          {dynamicWord}
+        </span>
+      </>
+    );
+  };
 
   return (
-    <Box sx={{ textAlign: 'center' }}>
+    <Box sx={{ textAlign: 'left', width: '100%' }}>
       <Typography
         variant='h2'
         component='h1'
-        fontWeight='bold'
-        color='primary.main'
-        gutterBottom
+        sx={{
+          mb: 2,
+          color: theme.palette.text.secondary,
+          fontWeight: 'normal',
+        }}
       >
         {staticText}
       </Typography>
-      <Box
+      <Typography
+        variant='h1'
+        component='p'
         sx={{
-          height: '3.5em',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          fontWeight: 'bold',
+          fontSize: '4rem',
+          background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          mb: 3,
         }}
       >
-        <Typography variant='h4' component='p' color='text.primary'>
-          {dynamicText}
-          <span style={{ color: theme.palette.secondary.main }}>
-            {text.slice(staticText.length + dynamicText.length + 1)}
-          </span>
+        {name}
+      </Typography>
+      <Typography
+        variant='h3'
+        component='p'
+        color='text.primary'
+        sx={{ mb: 3, fontWeight: 'normal' }}
+      >
+        {roleText} <span style={{ fontWeight: 'bold' }}>{role}</span>
+      </Typography>
+      <Box
+        sx={{
+          height: '3em',
+          display: 'flex',
+          alignItems: 'center',
+          overflow: 'hidden',
+        }}
+      >
+        <Typography
+          variant='h4'
+          component='p'
+          sx={{
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '100%',
+          }}
+        >
+          {renderDynamicText()}
         </Typography>
         <Box
           sx={{
             width: '2px',
             height: '1em',
-            bgcolor: 'secondary.main',
+            bgcolor: theme.palette.secondary.main,
             ml: 1,
             animation: 'blink 0.7s infinite',
             '@keyframes blink': {

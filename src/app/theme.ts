@@ -25,15 +25,19 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           error: {
             main: '#d32f2f',
+            light: '#e57373',
           },
           warning: {
             main: '#ffa000',
+            light: '#ffb74d',
           },
           info: {
             main: '#1976d2',
+            light: '#64b5f6',
           },
           success: {
             main: '#388e3c',
+            light: '#81c784',
           },
         }
       : {
@@ -57,15 +61,19 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           error: {
             main: '#f44336',
+            light: '#e57373',
           },
           warning: {
             main: '#ffa726',
+            light: '#ffb74d',
           },
           info: {
             main: '#29b6f6',
+            light: '#4fc3f7',
           },
           success: {
             main: '#66bb6a',
+            light: '#81c784',
           },
         }),
   },

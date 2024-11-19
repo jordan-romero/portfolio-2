@@ -1,48 +1,43 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Box } from '@mui/material';
+import {
+  CharacterDisplayContainer,
+  StyledVideo,
+} from './characterDisplay.styled';
 
-interface CharacterDisplayProps {
+type CharacterDisplayProps = {
   type: 'image' | 'video';
   src: string;
   alt?: string;
   width?: number;
   height?: number;
-}
+};
 
-const CharacterDisplay: React.FC<CharacterDisplayProps> = ({
+export const CharacterDisplay = ({
   type,
   src,
   alt = 'Character display',
   width = 200,
   height = 200,
-}) => {
+}: CharacterDisplayProps) => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 4,
-      }}
-    >
+    <CharacterDisplayContainer>
       {type === 'image' ? (
         <Image src={src} alt={alt} width={width} height={height} />
       ) : (
-        <video
+        <StyledVideo
+          width={width}
+          height={height}
           autoPlay
           loop
           muted
           playsInline
-          style={{ width: `${width}px`, height: `${height}px` }}
         >
           <source src={src} type='video/mp4' />
           Your browser does not support the video tag.
-        </video>
+        </StyledVideo>
       )}
-    </Box>
+    </CharacterDisplayContainer>
   );
 };
-
-export default CharacterDisplay;

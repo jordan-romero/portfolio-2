@@ -4,15 +4,12 @@ import React from 'react';
 import { IconButton } from '@mui/material';
 import { DarkMode, LightMode } from '@mui/icons-material';
 
-interface ThemeToggleProps {
+type ThemeToggleProps = {
   isDarkMode: boolean;
   toggleTheme: () => void;
-}
+};
 
-const ThemeToggle: React.FC<ThemeToggleProps> = ({
-  isDarkMode,
-  toggleTheme,
-}) => {
+const ThemeToggle = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
   return (
     <IconButton
       onClick={toggleTheme}

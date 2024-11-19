@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         transition: 'background-color 0.3s ease',
       }}
     >
-      <Container maxWidth='lg'>
+      <Container maxWidth='xl'>
         <LandingPage />
       </Container>
     </Box>

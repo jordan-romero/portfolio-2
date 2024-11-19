@@ -9,7 +9,7 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
-import ThemeToggle from './components/ThemeToggle';
+import ThemeToggle from './components/LandingPage/ThemeToggle';
 
 const ThemeRegistry = ({ children }: { children: ReactNode }) => {
   const [{ cache, flush }] = useState(() => {

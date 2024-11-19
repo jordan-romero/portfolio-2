@@ -1,9 +1,16 @@
-'use client';
+import { useState, useEffect } from 'react';
+import { HeaderContainer } from './animatedHeader.styled';
+import { useTheme } from '@mui/material/styles';
+import {
+  StaticText,
+  NameText,
+  RoleText,
+  DynamicTextContainer,
+  DynamicText,
+  BlinkingCursor,
+} from './animatedHeader.styled';
 
-import React, { useState, useEffect } from 'react';
-import { Typography, Box, useTheme } from '@mui/material';
-
-export const AnimatedHeader: React.FC = () => {
+export const AnimatedHeader = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -59,7 +66,7 @@ export const AnimatedHeader: React.FC = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, loopNum, typingSpeed, isComplete]);
+  }, [text, isDeleting, loopNum, typingSpeed, isComplete, dynamicWords]);
 
   const renderDynamicText = () => {
     const parts = text.split(' ');
@@ -79,75 +86,16 @@ export const AnimatedHeader: React.FC = () => {
   };
 
   return (
-    <Box sx={{ textAlign: 'left', width: '100%' }}>
-      <Typography
-        variant='h2'
-        component='h1'
-        sx={{
-          mb: 2,
-          color: theme.palette.text.secondary,
-          fontWeight: 'normal',
-        }}
-      >
-        {staticText}
-      </Typography>
-      <Typography
-        variant='h1'
-        component='p'
-        sx={{
-          fontWeight: 'bold',
-          fontSize: '4rem',
-          background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          mb: 3,
-        }}
-      >
-        {name}
-      </Typography>
-      <Typography
-        variant='h3'
-        component='p'
-        color='text.primary'
-        sx={{ mb: 3, fontWeight: 'normal' }}
-      >
+    <HeaderContainer>
+      <StaticText variant='h2'>{staticText}</StaticText>
+      <NameText variant='h1'>{name}</NameText>
+      <RoleText variant='h3' color='text.primary'>
         {roleText} <span style={{ fontWeight: 'bold' }}>{role}</span>
-      </Typography>
-      <Box
-        sx={{
-          height: '3em',
-          display: 'flex',
-          alignItems: 'center',
-          overflow: 'hidden',
-        }}
-      >
-        <Typography
-          variant='h4'
-          component='p'
-          sx={{
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            maxWidth: '100%',
-          }}
-        >
-          {renderDynamicText()}
-        </Typography>
-        <Box
-          sx={{
-            width: '2px',
-            height: '1em',
-            bgcolor: theme.palette.secondary.main,
-            ml: 1,
-            animation: 'blink 0.7s infinite',
-            '@keyframes blink': {
-              '0%': { opacity: 0 },
-              '50%': { opacity: 1 },
-              '100%': { opacity: 0 },
-            },
-          }}
-        />
-      </Box>
-    </Box>
+      </RoleText>
+      <DynamicTextContainer>
+        <DynamicText variant='h4'>{renderDynamicText()}</DynamicText>
+        <BlinkingCursor />
+      </DynamicTextContainer>
+    </HeaderContainer>
   );
 };

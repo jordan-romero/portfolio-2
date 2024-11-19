@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { HeadShotContainer, DownloadButton } from './headshot.styled';
 import DownloadIcon from '@mui/icons-material/Download';
+import Link from 'next/link';
 
 export const HeadShot: React.FC = () => {
   return (
@@ -14,16 +15,19 @@ export const HeadShot: React.FC = () => {
         objectFit='cover'
         priority
       />
-      <DownloadButton
-        component={'a' as React.ElementType}
+      <Link
         href='https://docs.google.com/document/d/1_aRGytxp0SVRVtSgKkfmUgbmXqN348sa3trcvu1cxE8/edit?usp=sharing'
+        passHref
         target='_blank'
-        rel='noopener noreferrer'
-        variant='contained'
-        startIcon={<DownloadIcon />}
       >
-        Download CV
-      </DownloadButton>
+        <DownloadButton
+          variant='contained'
+          startIcon={<DownloadIcon />}
+          rel='noopener noreferrer'
+        >
+          Download CV
+        </DownloadButton>
+      </Link>
     </HeadShotContainer>
   );
 };

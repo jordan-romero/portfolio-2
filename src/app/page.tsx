@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container } from '@mui/material';
 import { LandingPage } from './components/LandingPage/LandingPage';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <Box
       sx={{

@@ -1,0 +1,106 @@
+{
+  "name": "Jordan T. Romero",
+  "title": "Senior Software Engineer",
+  "contact": {
+    "phone": "512-348-0227",
+    "email": "jordan.t.romero@gmail.com",
+    "links": {
+      "github": "https://github.com/your-profile",
+      "medium": "https://medium.com/your-profile",
+      "linkedin": "https://linkedin.com/in/your-profile"
+    }
+  },
+  "summary": "An observant and innovative software engineer with a proven ability to deliver efficient and user-focused solutions. Boasts strong practical programming skills, effective communication, and robust project management capabilities, fostering productive work environments and team-centric projects. Committed to continuous learning, UI/UX design, and adopting the latest technologies to drive advancements in software development.",
+  "skills": {
+    "topSkills": [
+      "React",
+      "JavaScript",
+      "Next.js",
+      "GraphQL",
+      "Node.js",
+      "Playwright",
+      "TypeScript",
+      "Material-UI",
+      "PostgreSQL",
+      "CSS",
+      "HTML",
+      "GitHub"
+    ],
+    "frontend": ["JavaScript (ES6)", "React", "TypeScript", "Material-UI", "React-Native", "Redux", "HTML", "CSS", "SASS"],
+    "backend": ["Node.js", "GraphQL", "Ruby", "Rails", "Prisma", "Express", "RESTful APIs"],
+    "database": ["SQLite3", "PostgreSQL", "Supabase", "Firebase"],
+    "testing": ["Jest", "Cypress", "Playwright", "React Testing Library"],
+    "devOps": ["AWS", "EKS", "Docker", "Kubernetes"],
+    "design": ["Figma", "Sketch", "Storybook"],
+    "cicd": ["CircleCI", "GitHub Actions", "Netlify", "Vercel"],
+    "other": ["Auth0", "Retool", "OAuth", "WebSockets"]
+  },
+  "experience": [
+    {
+      "company": "Resilia",
+      "role": "Senior Software Engineer",
+      "duration": "June 2022 - Present",
+      "responsibilities": [
+        "Spearheaded development projects utilizing a comprehensive tech stack: React, TypeScript, Node.js, GraphQL, Prisma, PostgreSQL, and Auth0, significantly enhancing platform capabilities and user experience.",
+        "Architected and implemented microservices-based solutions, leveraging AWS services and Amazon EKS (Elastic Kubernetes Service) to improve scalability and maintainability of the platform.",
+        "Played a key role in building and implementing the funder platform, a critical component of Resilia's offering, demonstrating ability to deliver complex, high-impact features.",
+        "Contributed to every aspect of the Resilia platform, touching and improving various features across the entire system, showcasing deep understanding and versatility.",
+        "Collaborated closely with product and design teams to expedite feature rollouts and troubleshoot issues, improving project delivery times and cross-functional teamwork.",
+        "Mentored junior developers, promoting best practices in modern web development, cloud architecture, and fostering a culture of continuous learning and improvement.",
+        "Implemented robust error handling and logging systems to enhance application reliability in a distributed microservices environment."
+      ],
+      "projects": [
+        {
+          "name": "Overview of Collaborated Goal Experience",
+          "description": "Implemented analytics tracking in the dashboard actions module.",
+          "loomUrl": "https://www.loom.com/share/21de8d87d5c14e4f99eb8f41d10e5cb2",
+          "image": "/images/collaborated-goal.png"
+        },
+        {
+          "name": "Executive Dashboard Overview",
+          "description": "Streamlined executive reporting with real-time data.",
+          "loomUrl": "https://www.loom.com/share/1f94a08f17e248248530bd6cbd2e628f",
+          "image": "/images/executive-dashboard.png"
+        },
+        {
+          "name": "Funder Goals Page",
+          "description": "Enabled funders to track goals and measure impact.",
+          "loomUrl": "https://www.loom.com/share/58e017062c11413cb5576adb609fd82e",
+          "image": "/images/funder-goals.png"
+        },
+        {
+          "name": "Needs Assessment",
+          "description": "Designed and deployed tools for user needs evaluation.",
+          "loomUrl": "https://www.loom.com/share/d36f631d540642f38ef5e866f13e952c",
+          "image": "/images/needs-assessment.png"
+        }
+      ]
+    },
+    {
+      "company": "Knock",
+      "role": "Software Engineer",
+      "duration": "April 2021 - March 2022",
+      "responsibilities": [
+        "Utilized strong practical programming skills to build products quickly and efficiently in a high-paced, start-up environment.",
+        "Worked closely across teams to produce quality, responsive UI with React and React Native.",
+        "Implemented and analyzed A/B tests to optimize user experience and inform product decisions.",
+        "Led the development and successful launch of a new product within a two-week timeframe, demonstrating ability to deliver under tight deadlines.",
+        "Developed and launched key product features, contributing to improved user retention.",
+        "Optimized API integration to enhance app performance and reduce load times.",
+        "Collaborated with UX/UI designers to implement responsive designs, improving mobile user experience."
+      ],
+      "projects": [
+    {
+      "name": "Website Revamp",
+      "description": "Redesigned and implemented the company's marketing website to align with brand standards and improve user experience. Focused on responsive design and SEO optimization.",
+      "image": "/images/knock-website-revamp.png" 
+    },
+    {
+      "name": "Guaranteed Offer Product Release",
+      "description": "Led the development and release of the 'Guaranteed Offer' product. Delivered all marketing materials, web updates, and product launch elements within two weeks.",
+      "image": "/images/knock-guaranteed-offer.png" 
+    }
+  ]
+    }
+  ]
+}

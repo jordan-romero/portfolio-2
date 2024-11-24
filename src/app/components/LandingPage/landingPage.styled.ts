@@ -1,38 +1,35 @@
 'use client';
 
 import { styled } from '@mui/material/styles';
-import { Box } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 
-export const LandingPageContainer = styled(Box)(({ theme }) => ({
+// Top-Level Container for the entire page
+export const LandingPageWrapper = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  overflow: 'hidden',
+}));
+
+// Hero Section with background image
+export const HeroSectionContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  minHeight: '100vh',
-  maxWidth: '1600px',
-  margin: '0 auto',
+  width: '100%',
   padding: theme.spacing(4),
-  gap: theme.spacing(4),
-  overflow: 'hidden',
-
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundImage: `url(${
-      theme.palette.mode === 'light'
-        ? '/lightModeBackgroundImg.png'
-        : '/darkModeBackgroundImg.png'
-    })`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    zIndex: 1,
-    pointerEvents: 'none',
-  },
+  minHeight: '80vh', // Occupies most of the viewport
+  backgroundImage: `url(${
+    theme.palette.mode === 'light'
+      ? '/lightModeBackgroundImg.png'
+      : '/darkModeBackgroundImg.png'
+  })`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  zIndex: 1,
 
   '& > *': {
     position: 'relative',
@@ -41,26 +38,21 @@ export const LandingPageContainer = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.up('md')]: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
   },
 }));
 
-// Box for Animated Header
 export const HeaderContainer = styled(Box)(({ theme }) => ({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  position: 'relative',
-  zIndex: 2,
   gap: theme.spacing(2),
 
   [theme.breakpoints.up('md')]: {
-    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
     paddingRight: theme.spacing(2),
-    alignItems: 'center',
   },
 
   [theme.breakpoints.up('lg')]: {
@@ -68,17 +60,29 @@ export const HeaderContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-// Box for HeadShot
 export const HeadShotContainer = styled(Box)(({ theme }) => ({
   flex: 1,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  position: 'relative',
-  zIndex: 2,
 
   [theme.breakpoints.up('md')]: {
     justifyContent: 'flex-start',
     paddingLeft: theme.spacing(2),
+  },
+}));
+
+// Resume Section in a distinct Paper container
+export const InteractiveResumeContainer = styled(Paper)(({ theme }) => ({
+  width: '100%',
+  marginTop: theme.spacing(4),
+  padding: theme.spacing(4),
+  borderRadius: theme.spacing(2),
+  backgroundColor: theme.palette.background.default,
+  boxShadow: theme.shadows[3],
+
+  [theme.breakpoints.up('md')]: {
+    marginTop: theme.spacing(6),
+    padding: theme.spacing(6),
   },
 }));

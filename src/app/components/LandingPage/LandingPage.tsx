@@ -4,20 +4,31 @@ import React from 'react';
 import { AnimatedHeader } from './AnimatedHeader/AnimatedHeader';
 import { HeadShot } from './Headshot/Headshot';
 import {
-  LandingPageContainer,
+  LandingPageWrapper,
+  HeroSectionContainer,
   HeaderContainer,
   HeadShotContainer,
+  InteractiveResumeContainer,
 } from './landingPage.styled';
+import {InteractiveResume} from './InteractiveResume/InteractiveResume';
 
 export const LandingPage = () => {
   return (
-    <LandingPageContainer>
-      <HeaderContainer>
-        <AnimatedHeader />
-      </HeaderContainer>
-      <HeadShotContainer>
-        <HeadShot />
-      </HeadShotContainer>
-    </LandingPageContainer>
+    <LandingPageWrapper>
+      {/* Hero Section */}
+      <HeroSectionContainer>
+        <HeaderContainer>
+          <AnimatedHeader />
+        </HeaderContainer>
+        <HeadShotContainer>
+          <HeadShot />
+        </HeadShotContainer>
+      </HeroSectionContainer>
+
+      {/* Interactive Resume Section */}
+      <InteractiveResumeContainer>
+        <InteractiveResume />
+      </InteractiveResumeContainer>
+    </LandingPageWrapper>
   );
 };

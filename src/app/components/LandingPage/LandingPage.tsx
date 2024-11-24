@@ -25,7 +25,7 @@ export const LandingPage = () => {
         </HeadShotContainer>
       </HeroSectionContainer>
 
-      {/* Interactive Resume Section */}
+      Interactive Resume Section
       <InteractiveResumeContainer>
         <InteractiveResume />
       </InteractiveResumeContainer>

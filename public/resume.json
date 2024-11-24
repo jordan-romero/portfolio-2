@@ -13,21 +13,39 @@
   "summary": "An observant and innovative software engineer with a proven ability to deliver efficient and user-focused solutions. Boasts strong practical programming skills, effective communication, and robust project management capabilities, fostering productive work environments and team-centric projects. Committed to continuous learning, UI/UX design, and adopting the latest technologies to drive advancements in software development.",
   "skills": {
     "topSkills": [
+      { "name": "JavaScript", "level": 90 },
+      { "name": "React", "level": 85 },
+      { "name": "Node.js", "level": 80 },
+      { "name": "Next.js", "level": 80 },
+      { "name": "TypeScript", "level": 80 },
+      { "name": "GraphQL", "level": 80 },
+      { "name": "Material-UI", "level": 85 },
+      { "name": "PostgreSQL", "level": 80 },
+      { "name": "Playwright", "level": 80 },
+      { "name": "CSS", "level": 90 },
+      { "name": "HTML", "level": 90 },
+      { "name": "GitHub", "level": 90 }
+    ],
+    "frontend": [
+      "JavaScript (ES6)",
       "React",
-      "JavaScript",
-      "Next.js",
-      "GraphQL",
-      "Node.js",
-      "Playwright",
       "TypeScript",
       "Material-UI",
-      "PostgreSQL",
-      "CSS",
+      "React Native",
+      "Redux",
       "HTML",
-      "GitHub"
+      "CSS",
+      "SASS"
     ],
-    "frontend": ["JavaScript (ES6)", "React", "TypeScript", "Material-UI", "React-Native", "Redux", "HTML", "CSS", "SASS"],
-    "backend": ["Node.js", "GraphQL", "Ruby", "Rails", "Prisma", "Express", "RESTful APIs"],
+    "backend": [
+      "Node.js",
+      "GraphQL",
+      "Ruby",
+      "Rails",
+      "Prisma",
+      "Express",
+      "RESTful APIs"
+    ],
     "database": ["SQLite3", "PostgreSQL", "Supabase", "Firebase"],
     "testing": ["Jest", "Cypress", "Playwright", "React Testing Library"],
     "devOps": ["AWS", "EKS", "Docker", "Kubernetes"],
@@ -40,6 +58,7 @@
       "company": "Resilia",
       "role": "Senior Software Engineer",
       "duration": "June 2022 - Present",
+      "highLevelDescription": "Spearheaded development and design efforts across Resilia's platform, delivering high-impact solutions using a modern tech stack.",
       "responsibilities": [
         "Spearheaded development projects utilizing a comprehensive tech stack: React, TypeScript, Node.js, GraphQL, Prisma, PostgreSQL, and Auth0, significantly enhancing platform capabilities and user experience.",
         "Architected and implemented microservices-based solutions, leveraging AWS services and Amazon EKS (Elastic Kubernetes Service) to improve scalability and maintainability of the platform.",
@@ -52,25 +71,25 @@
       "projects": [
         {
           "name": "Overview of Collaborated Goal Experience",
-          "description": "Implemented analytics tracking in the dashboard actions module.",
+          "description": "Implemented analytics tracking in the dashboard actions module to provide actionable insights.",
           "loomUrl": "https://www.loom.com/share/21de8d87d5c14e4f99eb8f41d10e5cb2",
           "image": "/images/collaborated-goal.png"
         },
         {
           "name": "Executive Dashboard Overview",
-          "description": "Streamlined executive reporting with real-time data.",
+          "description": "Streamlined executive reporting with real-time data, enhancing decision-making efficiency.",
           "loomUrl": "https://www.loom.com/share/1f94a08f17e248248530bd6cbd2e628f",
           "image": "/images/executive-dashboard.png"
         },
         {
           "name": "Funder Goals Page",
-          "description": "Enabled funders to track goals and measure impact.",
+          "description": "Enabled funders to track goals and measure impact through intuitive, user-friendly tools.",
           "loomUrl": "https://www.loom.com/share/58e017062c11413cb5576adb609fd82e",
           "image": "/images/funder-goals.png"
         },
         {
           "name": "Needs Assessment",
-          "description": "Designed and deployed tools for user needs evaluation.",
+          "description": "Designed and deployed tools for evaluating user needs, boosting customer satisfaction.",
           "loomUrl": "https://www.loom.com/share/d36f631d540642f38ef5e866f13e952c",
           "image": "/images/needs-assessment.png"
         }
@@ -80,6 +99,7 @@
       "company": "Knock",
       "role": "Software Engineer",
       "duration": "April 2021 - March 2022",
+      "highLevelDescription": "Developed responsive, scalable UI and optimized app performance in a fast-paced, start-up environment.",
       "responsibilities": [
         "Utilized strong practical programming skills to build products quickly and efficiently in a high-paced, start-up environment.",
         "Worked closely across teams to produce quality, responsive UI with React and React Native.",
@@ -90,17 +110,17 @@
         "Collaborated with UX/UI designers to implement responsive designs, improving mobile user experience."
       ],
       "projects": [
-    {
-      "name": "Website Revamp",
-      "description": "Redesigned and implemented the company's marketing website to align with brand standards and improve user experience. Focused on responsive design and SEO optimization.",
-      "image": "/images/knock-website-revamp.png" 
-    },
-    {
-      "name": "Guaranteed Offer Product Release",
-      "description": "Led the development and release of the 'Guaranteed Offer' product. Delivered all marketing materials, web updates, and product launch elements within two weeks.",
-      "image": "/images/knock-guaranteed-offer.png" 
-    }
-  ]
+        {
+          "name": "Website Revamp",
+          "description": "Redesigned and implemented the company's marketing website to align with brand standards and improve user experience. Focused on responsive design and SEO optimization.",
+          "image": "/images/knock-website-revamp.png"
+        },
+        {
+          "name": "Guaranteed Offer Product Release",
+          "description": "Led the development and release of the 'Guaranteed Offer' product. Delivered all marketing materials, web updates, and product launch elements within two weeks.",
+          "image": "/images/knock-guaranteed-offer.png"
+        }
+      ]
     }
   ]
 }

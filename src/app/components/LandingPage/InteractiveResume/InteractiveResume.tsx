@@ -3,9 +3,9 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import axios from "axios";
-import { JobExperience } from "./JobExperience";
-import { SkillsSidebar } from "./SkillsSidebar";
-import { CallingCard } from "./CallingCard";
+import { JobExperience } from "./JobExperience/JobExperience";
+import { SkillsSidebar } from "./SkillsSidebar/SkillsSidebar";
+import { CallingCard } from "./CallingCard/CallingCard";
 
 type ResumeData = {
   name: string;

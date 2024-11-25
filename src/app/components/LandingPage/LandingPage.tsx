@@ -15,7 +15,6 @@ import {InteractiveResume} from './InteractiveResume/InteractiveResume';
 export const LandingPage = () => {
   return (
     <LandingPageWrapper>
-      {/* Hero Section */}
       <HeroSectionContainer>
         <HeaderContainer>
           <AnimatedHeader />
@@ -24,8 +23,6 @@ export const LandingPage = () => {
           <HeadShot />
         </HeadShotContainer>
       </HeroSectionContainer>
-
-      Interactive Resume Section
       <InteractiveResumeContainer>
         <InteractiveResume />
       </InteractiveResumeContainer>

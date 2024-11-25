@@ -16,7 +16,7 @@ type SkillsSidebarProps = {
 export const SkillsSidebar: React.FC<SkillsSidebarProps> = ({ skills }) => {
   return (
     <Box>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" fontWeight='bold' gutterBottom>
         Top Skills
       </Typography>
       {skills.map((skill, idx) => (

@@ -13,7 +13,7 @@ export const CallingCard = () => {
         border: "1px solid #ddd",
         borderRadius: "8px",
         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-        maxWidth: 800,
+        maxWidth: 900,
         margin: "auto",
       }}
     >
@@ -38,9 +38,7 @@ export const CallingCard = () => {
             variant="body1"
             sx={{ marginTop: 1, maxWidth: 400, color: "text.secondary" }}
           >
-            I’m a full stack developer with over 10 years of experience in web
-            development. I specialize in building robust, maintainable web
-            applications using modern technologies.
+          💻 Full-Stack Developer with 4 years of experience building scalable, maintainable web applications. Skilled in React, Node.js, and GraphQL, I thrive in fast-paced environments, creating impactful solutions that deliver real-world value.
           </Typography>
         </Box>
       </Box>
@@ -60,7 +58,7 @@ export const CallingCard = () => {
         {/* GitHub */}
         <IconButton
           component="a"
-          href="https://github.com/jordan-t-romero"
+          href="https://github.com/jordan-romero"
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: "text.primary", marginBottom: 1 }}

@@ -121,6 +121,34 @@
           "image": "/images/knock-guaranteed-offer.png"
         }
       ]
+    }, 
+    {
+      "company": "ActingAccents.com",
+      "role": "Founding Software Engineer - Freelance",
+      "duration": "On-going",
+      "highLevelDescription": "Solely responsible for designing and developing ActingAccents.com's platform, including a pre-launch landing page and an innovative online course focused on dialect training using the International Phonetic Alphabet.",
+      "responsibilities": [
+        "Spearheaded the development of the platform using Next.js, TypeScript, Supabase, PostgreSQL, Prisma, AWS, and Node.js, ensuring a robust and scalable architecture.",
+        "Designed and launched a pre-launch landing page that provides class context, enables user sign-ups, and aligns with branding standards.",
+        "Collaborated with stakeholders to refine user experience and improve engagement through responsive design and SEO optimization.",
+        "Implemented API integrations to manage user data and streamline workflows.",
+        "Currently developing an online course that teaches users how to speak in various dialects using the International Phonetic Alphabet, incorporating interactive features and seamless user navigation.",
+        "Utilized Vercel for deployment, ensuring fast and reliable delivery of features in a live environment.",
+        "Optimized application performance by implementing efficient database queries and reducing load times."
+      ],
+      "projects": [
+        {
+          "name": "Pre-launch Landing Page",
+          "description": "Developed a responsive, scalable landing page using Next.js and TypeScript. The page provides detailed class information, allows users to sign up, and integrates with Supabase for data management.",
+          "image": "/images/prelaunch-landing-page.png"
+        },
+        {
+          "name": "Online Dialect Course",
+          "description": "Currently building an interactive online course using Next.js, Supabase, and Prisma. The course leverages the International Phonetic Alphabet to teach users various dialects and accents.",
+          "image": "/images/online-dialect-course.png"
+        }
+      ]
     }
+    
   ]
 }

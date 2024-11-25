@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { AiSummaryModal } from "./AISummaryModal";
+import { AiSummaryModal } from "../AISummaryModal/AISummaryModal";
 
 type JobExperienceProps = {
   company: string;
@@ -58,41 +58,42 @@ export const JobExperience: React.FC<JobExperienceProps> = ({
           alignItems: "center",
         }}
       >
-          <Box>
-            <Typography variant="h6">{company}</Typography>
+          <Box width='100%'>
+            <Box display='flex' justifyContent='space-between' >
+              <Typography variant="h6" fontWeight='bold'>{company}</Typography>
+              <Button
+                variant="outlined"
+                onClick={handleOpenModal}
+                startIcon={"✨"}
+                sx={{
+                  color: "#4facfe",
+                  borderColor: "#4facfe",
+                  fontWeight: "500",
+                  borderRadius: "8px",
+                  paddingX: 2,
+                  paddingY: 0.5,
+                  textTransform: "none",
+                  fontSize: "0.875rem",
+                  "&:hover": {
+                    backgroundColor: "#4facfe10",
+                    borderColor: "#00f2fe",
+                  },
+                  "&:focus": {
+                    outline: "2px solid #4facfe",
+                  },
+                }}
+              >
+              AI Summary
+          </Button>
+        </Box>
             <Typography variant="subtitle1">{role}</Typography>
             <Typography variant="subtitle2" sx={{ color: "text.secondary" }}>
               {duration}
             </Typography>
-            <Typography variant="body2" sx={{ marginTop: 1 }}>
+            <Typography variant="body2" sx={{ marginTop: 1 }} gutterBottom>
               {highLevelDescription}
             </Typography>
           </Box>
-
-          <Button
-            variant="contained"
-            onClick={handleOpenModal}
-            startIcon={"✨"}
-            sx={{
-              background: "linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)",
-              color: "white",
-              fontWeight: "bold",
-              borderRadius: "50px",
-              paddingX: 3,
-              paddingY: 1,
-              textTransform: "none",
-              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-              "&:hover": {
-                background: "linear-gradient(90deg, #00f2fe 0%, #4facfe 100%)",
-                boxShadow: "0 6px 14px rgba(0, 0, 0, 0.25)",
-              },
-              "&:focus": {
-                outline: "2px solid #4facfe",
-              },
-            }}
-          >
-            AI Summary 
-        </Button>
       </Box>
 
       {/* Accordion for More Details */}

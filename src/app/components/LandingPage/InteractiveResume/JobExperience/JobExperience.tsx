@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { AiSummaryModal } from "../AISummaryModal/AISummaryModal";
+import { Projects } from "../Projects/Projects"
+
 
 type JobExperienceProps = {
   company: string;
@@ -58,42 +60,44 @@ export const JobExperience: React.FC<JobExperienceProps> = ({
           alignItems: "center",
         }}
       >
-          <Box width='100%'>
-            <Box display='flex' justifyContent='space-between' >
-              <Typography variant="h6" fontWeight='bold'>{company}</Typography>
-              <Button
-                variant="outlined"
-                onClick={handleOpenModal}
-                startIcon={"✨"}
-                sx={{
-                  color: "#4facfe",
-                  borderColor: "#4facfe",
-                  fontWeight: "500",
-                  borderRadius: "8px",
-                  paddingX: 2,
-                  paddingY: 0.5,
-                  textTransform: "none",
-                  fontSize: "0.875rem",
-                  "&:hover": {
-                    backgroundColor: "#4facfe10",
-                    borderColor: "#00f2fe",
-                  },
-                  "&:focus": {
-                    outline: "2px solid #4facfe",
-                  },
-                }}
-              >
-              AI Summary
-          </Button>
-        </Box>
-            <Typography variant="subtitle1">{role}</Typography>
-            <Typography variant="subtitle2" sx={{ color: "text.secondary" }}>
-              {duration}
+        <Box width="100%">
+          <Box display="flex" justifyContent="space-between">
+            <Typography variant="h6" fontWeight="bold">
+              {company}
             </Typography>
-            <Typography variant="body2" sx={{ marginTop: 1 }} gutterBottom>
-              {highLevelDescription}
-            </Typography>
+            <Button
+              variant="outlined"
+              onClick={handleOpenModal}
+              startIcon={"✨"}
+              sx={{
+                color: "#4facfe",
+                borderColor: "#4facfe",
+                fontWeight: "500",
+                borderRadius: "8px",
+                paddingX: 2,
+                paddingY: 0.5,
+                textTransform: "none",
+                fontSize: "0.875rem",
+                "&:hover": {
+                  backgroundColor: "#4facfe10",
+                  borderColor: "#00f2fe",
+                },
+                "&:focus": {
+                  outline: "2px solid #4facfe",
+                },
+              }}
+            >
+              Summary
+            </Button>
           </Box>
+          <Typography variant="subtitle1">{role}</Typography>
+          <Typography variant="subtitle2" sx={{ color: "text.secondary" }}>
+            {duration}
+          </Typography>
+          <Typography variant="body2" sx={{ marginTop: 1 }} gutterBottom>
+            {highLevelDescription}
+          </Typography>
+        </Box>
       </Box>
 
       {/* Accordion for More Details */}
@@ -128,29 +132,7 @@ export const JobExperience: React.FC<JobExperienceProps> = ({
 
             {/* Projects */}
             {projects.length > 0 && (
-              <Box sx={{ marginTop: 2 }}>
-                <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                  Projects:
-                </Typography>
-                {projects.map((project, idx) => (
-                  <Box key={idx} sx={{ marginBottom: 2 }}>
-                    <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-                      {project.name}
-                    </Typography>
-                    <Typography variant="body2">{project.description}</Typography>
-                    {project.loomUrl && (
-                      <Button
-                        variant="text"
-                        href={project.loomUrl}
-                        target="_blank"
-                        sx={{ marginTop: 1 }}
-                      >
-                        View Loom Video
-                      </Button>
-                    )}
-                  </Box>
-                ))}
-              </Box>
+              <Projects projects={projects} />
             )}
           </Box>
         </AccordionDetails>

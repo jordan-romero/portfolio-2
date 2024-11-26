@@ -21,7 +21,7 @@ export const HeroSectionContainer = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   width: '100%',
   padding: theme.spacing(4),
-  minHeight: '80vh', // Occupies most of the viewport
+  minHeight: '90vh', 
   backgroundImage: `url(${
     theme.palette.mode === 'light'
       ? '/lightModeBackgroundImg.png'

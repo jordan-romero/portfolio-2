@@ -10,7 +10,11 @@ import {
   HeadShotContainer,
   InteractiveResumeContainer,
 } from './landingPage.styled';
-import {InteractiveResume} from './InteractiveResume/InteractiveResume';
+import { InteractiveResume } from './InteractiveResume/InteractiveResume';
+import RecentActivity from './RecentActivities/RecentActivity';
+import BlogFeed from './BlogFeed/BlogFeed';
+import { Box, Typography, Divider } from '@mui/material';
+import { ActivityFeed } from './ActivityFeed/ActivityFeed';
 
 export const LandingPage = () => {
   return (
@@ -26,6 +30,7 @@ export const LandingPage = () => {
       <InteractiveResumeContainer>
         <InteractiveResume />
       </InteractiveResumeContainer>
+      <ActivityFeed />
     </LandingPageWrapper>
   );
 };

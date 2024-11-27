@@ -11,6 +11,8 @@ import CodeIcon from "@mui/icons-material/Code";
 import CommentIcon from "@mui/icons-material/Comment";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
+import theme from "@/app/theme";
+import { useTheme } from "@mui/material";
 
 interface Activity {
   id: string;
@@ -21,6 +23,7 @@ interface Activity {
 
 const CustomizedTimeline: React.FC = () => {
   const [activity, setActivity] = useState<Activity[]>([]);
+  const theme = useTheme();
 
   useEffect(() => {
     const fetchActivity = async () => {
@@ -91,7 +94,7 @@ const CustomizedTimeline: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "2.5rem", // Adjust dot size
+                width: "2.5rem",
                 height: "2.5rem",
               }}
             >
@@ -106,6 +109,7 @@ const CustomizedTimeline: React.FC = () => {
               overflow: "hidden",
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
+              color: theme.palette.text.primary
             }}
           >
             <Typography variant="h6" component="span">

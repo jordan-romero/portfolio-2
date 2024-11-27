@@ -1,5 +1,11 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 
+declare module '@mui/material/styles/createPalette' {
+  interface TypeText {
+    tertiary?: string;
+  }
+}
+
 const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
   palette: {
     mode,
@@ -21,7 +27,8 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           text: {
             primary: '#363230',
-            secondary: '#b0b0b0',
+            secondary: '#8e8e8e',
+            tertiary: '#7b8cde',
           },
           error: {
             main: '#d32f2f',
@@ -58,6 +65,7 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           text: {
             primary: '#ffffff',
             secondary: '#b0b0b0',
+            tertiary: '#9eadf0',
           },
           error: {
             main: '#f44336',

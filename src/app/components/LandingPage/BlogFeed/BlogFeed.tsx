@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Box, Card, CardContent, Typography, Link, CircularProgress, CardMedia } from "@mui/material";
+import { Box, Card, CardContent, Typography, Link, CircularProgress, CardMedia, useTheme } from "@mui/material";
 
 interface Blog {
   title: string;
@@ -13,6 +13,7 @@ interface Blog {
 const BlogFeed: React.FC = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
+  const theme = useTheme();
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -46,7 +47,7 @@ const BlogFeed: React.FC = () => {
             />
           )}
           <CardContent>
-            <Typography variant="h6" component="div">
+            <Typography variant="h6" component="div" color={theme.palette.text.primary}>
               <Link href={blog.link} target="_blank" rel="noopener noreferrer">
                 {blog.title}
               </Link>

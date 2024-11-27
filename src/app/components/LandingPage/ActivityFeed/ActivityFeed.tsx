@@ -8,7 +8,6 @@ export const ActivityFeed = () => {
 
   return (
     <Box sx={{ mt: 4 }}>
-      {/* Main Title */}
       <Typography
         variant="h4"
         component="h2"
@@ -20,8 +19,6 @@ export const ActivityFeed = () => {
       >
         From Repos to Reflections 🌈
       </Typography>
-
-      {/* Content Sections */}
       <Box
         display="flex"
         flexDirection={{ xs: 'column', md: 'row' }}
@@ -29,7 +26,6 @@ export const ActivityFeed = () => {
         gap={4}
         sx={{ px: 2 }}
       >
-        {/* GitHub Recent Activity Section */}
         <Box sx={{ flex: 1 }}>
           <Typography
             variant="h5"
@@ -37,15 +33,13 @@ export const ActivityFeed = () => {
             sx={{
               fontWeight: 'bold',
               mb: 2,
-              color: theme.palette.text.secondary, 
+              color: theme.palette.text.tertiary, 
             }}
           >
             GitHub Adventures 🛠️
           </Typography>
           <RecentActivity />
         </Box>
-
-        {/* Blog Feed Section */}
         <Box sx={{ flex: 1 }}>
           <Typography
             variant="h5"
@@ -53,7 +47,7 @@ export const ActivityFeed = () => {
             sx={{
               fontWeight: 'bold',
               mb: 2,
-              color: theme.palette.text.secondary, 
+              color: theme.palette.text.tertiary, 
             }}
           >
             Blog Musings ✍️

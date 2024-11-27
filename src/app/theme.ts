@@ -21,7 +21,7 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           text: {
             primary: '#363230',
-            secondary: '#5c5552',
+            secondary: '#b0b0b0',
           },
           error: {
             main: '#d32f2f',

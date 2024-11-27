@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Box, Card, CardContent, Typography, Link, CircularProgress, CardMedia, useTheme } from "@mui/material";
 
-interface Blog {
+type Blog = {
   title: string;
   link: string;
   pubDate: string;
@@ -10,7 +10,7 @@ interface Blog {
   imageUrl?: string; // Optional image field
 }
 
-const BlogFeed: React.FC = () => {
+export const BlogFeed = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
   const theme = useTheme();
@@ -62,5 +62,3 @@ const BlogFeed: React.FC = () => {
     </Box>
   );
 };
-
-export default BlogFeed;

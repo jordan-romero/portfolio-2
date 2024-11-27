@@ -9,7 +9,7 @@ export const HeadShot: React.FC = () => {
   return (
     <HeadShotContainer>
       <Image
-        src='/headshot.png'
+        src='/images/headshot.png'
         alt='Jordan Romero'
         layout='fill'
         objectFit='cover'

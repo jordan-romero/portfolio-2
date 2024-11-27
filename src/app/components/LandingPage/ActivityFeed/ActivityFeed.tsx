@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
-import BlogFeed from '../BlogFeed/BlogFeed';
-import RecentActivity from '../RecentActivities/RecentActivity';
+import {BlogFeed} from '../BlogFeed/BlogFeed';
+import {RecentActivity} from '../RecentActivities/RecentActivity';
 
 export const ActivityFeed = () => {
   const theme = useTheme(); 

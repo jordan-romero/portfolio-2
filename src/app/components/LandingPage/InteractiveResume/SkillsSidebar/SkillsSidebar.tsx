@@ -36,6 +36,8 @@ export const SkillsSidebar: React.FC<SkillsSidebarProps> = ({ skills }) => {
           <ProgressBar
             variant="determinate"
             value={skill.level}
+            aria-label={`${skill.name} proficiency is ${skill.level}%`}
+            role="progressbar"
           />
         </Box>
       ))}

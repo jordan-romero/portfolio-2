@@ -52,6 +52,7 @@ export const CallingCard = () => {
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: "primary.main", marginBottom: 1 }}
+          aria-label="LinkedIn"
         >
           <LinkedIn fontSize="large" />
         </IconButton>
@@ -62,6 +63,7 @@ export const CallingCard = () => {
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: "text.primary", marginBottom: 1 }}
+          aria-label="Github"
         >
           <GitHub fontSize="large" />
         </IconButton>
@@ -72,6 +74,7 @@ export const CallingCard = () => {
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: "error.main" }}
+          aria-label="Email"
         >
           <Email fontSize="large" />
         </IconButton>

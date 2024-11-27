@@ -11,17 +11,16 @@ import CodeIcon from "@mui/icons-material/Code";
 import CommentIcon from "@mui/icons-material/Comment";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
-import theme from "@/app/theme";
 import { useTheme } from "@mui/material";
 
-interface Activity {
+type Activity = {
   id: string;
   type: string;
   repo: string;
   created_at: string;
 }
 
-const CustomizedTimeline: React.FC = () => {
+export const RecentActivity = () => {
   const [activity, setActivity] = useState<Activity[]>([]);
   const theme = useTheme();
 
@@ -47,8 +46,8 @@ const CustomizedTimeline: React.FC = () => {
 
   const getIconForEventType = (type: string) => {
     const iconStyle = {
-      color: "primary.dark", // Ensures the icons are dark
-      fontSize: "1.5rem", // Adjust icon size
+      color: "primary.dark", 
+      fontSize: "1.5rem", 
     };
 
     switch (type) {
@@ -123,4 +122,3 @@ const CustomizedTimeline: React.FC = () => {
   );
 };
 
-export default CustomizedTimeline;

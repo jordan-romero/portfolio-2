@@ -60,6 +60,7 @@ const CustomizedTimeline: React.FC = () => {
     }
   };
 
+
   return (
     <Timeline
       position="alternate"
@@ -68,7 +69,7 @@ const CustomizedTimeline: React.FC = () => {
           minHeight: '100px',
         },
         '& .MuiTimelineConnector-root': {
-          background: "linear-gradient(to bottom, #c1cbff, #a0f0d8)", // Apply gradient to connectors
+          background: "linear-gradient(to bottom, #c1cbff, #a0f0d8)", 
         },
       }}
     >
@@ -86,7 +87,7 @@ const CustomizedTimeline: React.FC = () => {
             <TimelineConnector />
             <TimelineDot
               sx={{
-                background: "linear-gradient(to bottom, #c1cbff, #a0f0d8)", // Gradient background for dot
+                background: "linear-gradient(to bottom, #c1cbff, #a0f0d8)", 
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",

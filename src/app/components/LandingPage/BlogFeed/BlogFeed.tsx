@@ -48,7 +48,18 @@ export const BlogFeed = () => {
           )}
           <CardContent>
             <Typography variant="h6" component="div" color={theme.palette.text.primary}>
-              <Link href={blog.link} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={blog.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: theme.palette.text.secondary, 
+                  textDecoration: "none", 
+                  "&:hover": {
+                    textDecoration: "underline", 
+                  },
+                }}
+              >
                 {blog.title}
               </Link>
             </Typography>

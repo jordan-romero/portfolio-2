@@ -27,8 +27,8 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           },
           text: {
             primary: '#363230',
-            secondary: '#8e8e8e',
-            tertiary: '#7b8cde',
+            secondary: '#353E43',
+            tertiary: '#4A4A4A',
           },
           error: {
             main: '#d32f2f',
@@ -65,7 +65,7 @@ const getDesignTokens = (mode: 'light' | 'dark'): ThemeOptions => ({
           text: {
             primary: '#ffffff',
             secondary: '#b0b0b0',
-            tertiary: '#9eadf0',
+            tertiary: '#4A4A4A',
           },
           error: {
             main: '#f44336',

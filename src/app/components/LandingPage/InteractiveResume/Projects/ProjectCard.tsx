@@ -10,7 +10,7 @@ type ProjectCardProps = {
   loomUrl?: string;
 };
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, image, loomUrl }) => {
+export const ProjectCard = ({ name, description, image, loomUrl }: ProjectCardProps) => {
   return (
     <Card
       sx={{
@@ -53,7 +53,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, ima
         <CardActions>
           <Button
             size="small"
-            variant="outlined"
+            variant="contained"
             href={loomUrl}
             target="_blank"
             sx={{ textTransform: 'none' }}

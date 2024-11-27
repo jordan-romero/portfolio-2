@@ -50,7 +50,7 @@ export const AnimatedHeader = () => {
         if (!isDeleting && text === fullText) {
           setIsDeleting(true);
           setTypingSpeed(100);
-        } else if (isDeleting && text === dynamicPrefix + ' ') {
+        } else if (isDeleting && text === `${dynamicPrefix} `) {
           setIsDeleting(false);
           setLoopNum(loopNum + 1);
           setTypingSpeed(150);
@@ -75,9 +75,12 @@ export const AnimatedHeader = () => {
 
     return (
       <>
-        {prefix}{' '}
+        <span style={{ color: theme.palette.text.secondary }}>{prefix}</span>{' '}
         <span
-          style={{ color: theme.palette.secondary.main, fontWeight: 'bold' }}
+          style={{
+            color: theme.palette.secondary.main,
+            fontWeight: 'bold',
+          }}
         >
           {dynamicWord}
         </span>

@@ -8,7 +8,7 @@ type Blog = {
   link: string;
   pubDate: string;
   contentSnippet: string;
-  imageUrl?: string; // Optional image field
+  imageUrl?: string; 
 }
 
 export const BlogFeed = () => {

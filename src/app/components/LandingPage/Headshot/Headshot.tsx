@@ -5,13 +5,15 @@ import { HeadShotContainer, DownloadButton } from './headshot.styled';
 import DownloadIcon from '@mui/icons-material/Download';
 import Link from 'next/link';
 
-export const HeadShot: React.FC = () => {
+export const HeadShot = () => {
   return (
     <HeadShotContainer>
       <Image
         src='/images/headshot.png'
         alt='Jordan Romero'
-        layout='fill'
+        width={1}
+        height={1}
+        layout='responsive'
         objectFit='cover'
         priority
       />

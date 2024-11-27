@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Container } from '@mui/material';
 import { LandingPage } from './components/LandingPage/LandingPage';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 
 const Home = () => {
   return (
@@ -16,10 +18,12 @@ const Home = () => {
     >
       <Container maxWidth='xl'>
         <LandingPage />
+        <SpeedInsights />
+        <Analytics />
       </Container>
     </Box>
   );
 };
-// adding changes for testing starship 
+
 
 export default Home;

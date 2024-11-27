@@ -9,7 +9,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           name='viewport'
           content='width=device-width, initial-scale=1.0'
         />
-        <title>Jordan Romero's Portfolio</title>
+        <title>Jordan Romero - Personal Portfolio</title>
       </head>
       <body>
         <ThemeRegistry>{children}</ThemeRegistry>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import useSWR from "swr";
 import { Box, Card, CardContent, Typography, Link, CircularProgress, CardMedia, useTheme } from "@mui/material";
+import { fetcher } from "../fetcher";
 
 type Blog = {
   title: string;
@@ -11,32 +12,24 @@ type Blog = {
 }
 
 export const BlogFeed = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [loading, setLoading] = useState(true);
   const theme = useTheme();
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get("/api/medium-blogs");
-        setBlogs(response.data);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const { data: blogs, error, isLoading } = useSWR<Blog[]>("/api/medium-blogs", fetcher, {
+    refreshInterval: 8640000, 
+    revalidateOnFocus: true, 
+  });
 
-    fetchBlogs();
-  }, []);
-
-  if (loading) {
+  if (isLoading) {
     return <CircularProgress />;
+  }
+
+  if (error) {
+    return <Typography color="error">Error loading blogs. Please try again later.</Typography>;
   }
 
   return (
     <Box>
-      {blogs.map((blog) => (
+      {blogs?.map((blog: Blog) => (
         <Card key={blog.link} sx={{ marginBottom: 2 }}>
           {blog.imageUrl && (
             <CardMedia
@@ -53,10 +46,10 @@ export const BlogFeed = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
-                  color: theme.palette.text.secondary, 
-                  textDecoration: "none", 
+                  color: theme.palette.text.secondary,
+                  textDecoration: "none",
                   "&:hover": {
-                    textDecoration: "underline", 
+                    textDecoration: "underline",
                   },
                 }}
               >

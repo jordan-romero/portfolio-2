@@ -10,8 +10,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import CodeIcon from "@mui/icons-material/Code";
 import CommentIcon from "@mui/icons-material/Comment";
 import Typography from "@mui/material/Typography";
-import axios from "axios";
-import { useTheme } from "@mui/material";
+import useSWR from "swr";
+import { CircularProgress, useTheme } from "@mui/material";
+import { fetcher } from "../fetcher";
 
 type Activity = {
   id: string;
@@ -21,22 +22,17 @@ type Activity = {
 }
 
 export const RecentActivity = () => {
-  const [activity, setActivity] = useState<Activity[]>([]);
   const theme = useTheme();
 
-  useEffect(() => {
-    const fetchActivity = async () => {
-      try {
-        const response = await axios.get("/api/recent-activity");
-        setActivity(response.data);
-      } catch (error) {
-        console.error("Error fetching activity:", error);
-      }
-    };
+  const { data: activity, error, isLoading } = useSWR<Activity[]>("/api/recent-activity", fetcher, {
+    refreshInterval: 8640000, 
+    revalidateOnFocus: true, 
+  });
 
-    fetchActivity();
-  }, []);
-
+  
+  if (isLoading) {
+    return <CircularProgress />;
+  }
   const formatEventType = (type: string) => {
     return type
       .replace(/([A-Z])/g, " $1")
@@ -75,7 +71,7 @@ export const RecentActivity = () => {
         },
       }}
     >
-      {activity.map((event, index) => (
+      {activity && activity.map((event, index) => (
         <TimelineItem key={event.id}>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}

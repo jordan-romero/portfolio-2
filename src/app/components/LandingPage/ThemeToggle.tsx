@@ -22,6 +22,7 @@ const ThemeToggle = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
           bgcolor: 'action.hover',
         },
       }}
+      aria-label='toggle theme'
     >
       {isDarkMode ? <LightMode /> : <DarkMode />}
     </IconButton>

@@ -7,6 +7,12 @@ export const HeadShotContainer = styled(Box)(({ theme }) => ({
   height: '600px',
   marginLeft: '20px',
   marginBottom: '20px',
+  [theme.breakpoints.down('sm')]: {
+    width: '400px', // Smaller width for small screens
+  },
+  [theme.breakpoints.down('xs')]: {
+    width: '200px', // Even smaller width for extra-small screens
+  },
 }));
 
 export const DownloadButton = styled(Button)<ButtonProps>(({ theme }) => ({

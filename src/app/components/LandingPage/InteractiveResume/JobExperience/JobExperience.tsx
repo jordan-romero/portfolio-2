@@ -29,7 +29,7 @@ type JobExperienceProps = {
   }[];
 };
 
-export const JobExperience: React.FC<JobExperienceProps> = ({
+export const JobExperience = ({
   company,
   role,
   duration,
@@ -37,7 +37,7 @@ export const JobExperience: React.FC<JobExperienceProps> = ({
   detailedDescription,
   responsibilities,
   projects,
-}) => {
+}: JobExperienceProps) => {
   // State to control the AI Summary Modal visibility
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
@@ -66,12 +66,11 @@ export const JobExperience: React.FC<JobExperienceProps> = ({
               {company}
             </Typography>
             <Button
-              variant="outlined"
               onClick={handleOpenModal}
               startIcon={"✨"}
-              sx={{
-                color: "#4facfe",
-                borderColor: "#4facfe",
+              sx={(theme) => ({
+                color: theme.palette.secondary.contrastText, // Ensure text is visible
+                backgroundColor: theme.palette.secondary.main, // Use secondary color for background
                 fontWeight: "500",
                 borderRadius: "8px",
                 paddingX: 2,
@@ -79,16 +78,16 @@ export const JobExperience: React.FC<JobExperienceProps> = ({
                 textTransform: "none",
                 fontSize: "0.875rem",
                 "&:hover": {
-                  backgroundColor: "#4facfe10",
-                  borderColor: "#00f2fe",
+                  backgroundColor: theme.palette.secondary.dark, // Darker shade for hover
+                  color: theme.palette.secondary.contrastText, // Maintain text visibility
                 },
                 "&:focus": {
-                  outline: "2px solid #4facfe",
+                  outline: `2px solid ${theme.palette.primary.main}`, // Focus outline using primary color
                 },
-              }}
+              })}
             >
               Summary
-            </Button>
+          </Button>
           </Box>
           <Typography variant="subtitle1">{role}</Typography>
           <Typography variant="subtitle2" sx={{ color: "text.secondary" }}>

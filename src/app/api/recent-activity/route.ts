@@ -12,6 +12,7 @@ export async function GET() {
       {
         headers: {
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          "Cache-Control": "no-cache",
         },
       }
     );
@@ -42,7 +43,7 @@ export async function GET() {
         type: event.type,
         repo: event.repo.name,
         created_at: event.created_at,
-        payload: event.payload, // Full details for non-Resilia events
+        payload: event.payload, 
       };
     });
 

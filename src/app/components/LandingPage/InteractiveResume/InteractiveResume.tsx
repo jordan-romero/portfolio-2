@@ -33,7 +33,7 @@ type ResumeData = {
   }[];
 };
 
-export const InteractiveResume: React.FC = () => {
+export const InteractiveResume = () => {
   const [resume, setResume] = React.useState<ResumeData | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);

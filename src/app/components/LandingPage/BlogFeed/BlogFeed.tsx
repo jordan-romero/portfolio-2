@@ -1,41 +1,35 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Box, Card, CardContent, Typography, Link, CircularProgress, CardMedia } from "@mui/material";
+import useSWR from "swr";
+import { Box, Card, CardContent, Typography, Link, CircularProgress, CardMedia, useTheme } from "@mui/material";
+import { fetcher } from "../fetcher";
 
-interface Blog {
+type Blog = {
   title: string;
   link: string;
   pubDate: string;
   contentSnippet: string;
-  imageUrl?: string; // Optional image field
+  imageUrl?: string; 
 }
 
-const BlogFeed: React.FC = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [loading, setLoading] = useState(true);
+export const BlogFeed = () => {
+  const theme = useTheme();
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get("/api/medium-blogs");
-        setBlogs(response.data);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const { data: blogs, error, isLoading } = useSWR<Blog[]>("/api/medium-blogs", fetcher, {
+    refreshInterval: 8640000, 
+    revalidateOnFocus: true, 
+  });
 
-    fetchBlogs();
-  }, []);
-
-  if (loading) {
+  if (isLoading) {
     return <CircularProgress />;
+  }
+
+  if (error) {
+    return <Typography color="error">Error loading blogs. Please try again later.</Typography>;
   }
 
   return (
     <Box>
-      {blogs.map((blog) => (
+      {blogs?.map((blog: Blog) => (
         <Card key={blog.link} sx={{ marginBottom: 2 }}>
           {blog.imageUrl && (
             <CardMedia
@@ -46,8 +40,19 @@ const BlogFeed: React.FC = () => {
             />
           )}
           <CardContent>
-            <Typography variant="h6" component="div">
-              <Link href={blog.link} target="_blank" rel="noopener noreferrer">
+            <Typography variant="h6" component="div" color={theme.palette.text.primary}>
+              <Link
+                href={blog.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: theme.palette.text.secondary,
+                  textDecoration: "none",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
                 {blog.title}
               </Link>
             </Typography>
@@ -61,5 +66,3 @@ const BlogFeed: React.FC = () => {
     </Box>
   );
 };
-
-export default BlogFeed;

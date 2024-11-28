@@ -17,11 +17,11 @@ type AiSummaryModalProps = {
 };
 
 
-export const AiSummaryModal: React.FC<AiSummaryModalProps> = ({
+export const AiSummaryModal = ({
   open,
   handleClose,
   job,
-}) => {
+}: AiSummaryModalProps) => {
   const theme = useTheme(); 
   const [loading, setLoading] = React.useState(false);
   const [summary, setSummary] = React.useState<string | null>(null);

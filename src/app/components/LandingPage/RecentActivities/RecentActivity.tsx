@@ -85,12 +85,13 @@ export const RecentActivity = () => {
             <TimelineConnector />
             <TimelineDot
               sx={{
-                background: "linear-gradient(to bottom, #c1cbff, #a0f0d8)", 
+                backgroundColor: theme.palette.primary.main, // Use a solid color
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 width: "2.5rem",
                 height: "2.5rem",
+                border: `2px solid ${theme.palette.primary.light}`, // Optional border for a cleaner look
               }}
             >
               {getIconForEventType(event.type)}

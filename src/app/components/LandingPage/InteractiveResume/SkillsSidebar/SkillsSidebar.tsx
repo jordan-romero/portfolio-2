@@ -14,7 +14,7 @@ type SkillsSidebarProps = {
   skills: Skill[];
 };
 
-export const SkillsSidebar: React.FC<SkillsSidebarProps> = ({ skills }) => {
+export const SkillsSidebar = ({ skills }: SkillsSidebarProps) => {
   return (
     <Box>
       <Typography variant="h5" fontWeight='bold' gutterBottom>
@@ -36,6 +36,8 @@ export const SkillsSidebar: React.FC<SkillsSidebarProps> = ({ skills }) => {
           <ProgressBar
             variant="determinate"
             value={skill.level}
+            aria-label={`${skill.name} proficiency is ${skill.level}%`}
+            role="progressbar"
           />
         </Box>
       ))}

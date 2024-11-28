@@ -15,7 +15,7 @@ type ProjectsProps = {
   projects: Project[];
 };
 
-export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+export const Projects = ({ projects }: ProjectsProps) => {
   if (projects.length === 0) return null;
 
   return (

@@ -10,31 +10,29 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import CodeIcon from "@mui/icons-material/Code";
 import CommentIcon from "@mui/icons-material/Comment";
 import Typography from "@mui/material/Typography";
-import axios from "axios";
+import useSWR from "swr";
+import { CircularProgress, useTheme } from "@mui/material";
+import { fetcher } from "../fetcher";
 
-interface Activity {
+type Activity = {
   id: string;
   type: string;
   repo: string;
   created_at: string;
 }
 
-const CustomizedTimeline: React.FC = () => {
-  const [activity, setActivity] = useState<Activity[]>([]);
+export const RecentActivity = () => {
+  const theme = useTheme();
 
-  useEffect(() => {
-    const fetchActivity = async () => {
-      try {
-        const response = await axios.get("/api/recent-activity");
-        setActivity(response.data);
-      } catch (error) {
-        console.error("Error fetching activity:", error);
-      }
-    };
+  const { data: activity, error, isLoading } = useSWR<Activity[]>("/api/recent-activity", fetcher, {
+    refreshInterval: 8640000, 
+    revalidateOnFocus: true, 
+  });
 
-    fetchActivity();
-  }, []);
-
+  
+  if (isLoading) {
+    return <CircularProgress />;
+  }
   const formatEventType = (type: string) => {
     return type
       .replace(/([A-Z])/g, " $1")
@@ -44,8 +42,8 @@ const CustomizedTimeline: React.FC = () => {
 
   const getIconForEventType = (type: string) => {
     const iconStyle = {
-      color: "primary.dark", // Ensures the icons are dark
-      fontSize: "1.5rem", // Adjust icon size
+      color: "primary.dark", 
+      fontSize: "1.5rem", 
     };
 
     switch (type) {
@@ -73,7 +71,7 @@ const CustomizedTimeline: React.FC = () => {
         },
       }}
     >
-      {activity.map((event, index) => (
+      {activity && activity.map((event, index) => (
         <TimelineItem key={event.id}>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
@@ -87,12 +85,13 @@ const CustomizedTimeline: React.FC = () => {
             <TimelineConnector />
             <TimelineDot
               sx={{
-                background: "linear-gradient(to bottom, #c1cbff, #a0f0d8)", 
+                backgroundColor: theme.palette.primary.main, // Use a solid color
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "2.5rem", // Adjust dot size
+                width: "2.5rem",
                 height: "2.5rem",
+                border: `2px solid ${theme.palette.primary.light}`, // Optional border for a cleaner look
               }}
             >
               {getIconForEventType(event.type)}
@@ -106,6 +105,7 @@ const CustomizedTimeline: React.FC = () => {
               overflow: "hidden",
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
+              color: theme.palette.text.primary
             }}
           >
             <Typography variant="h6" component="span">
@@ -119,4 +119,3 @@ const CustomizedTimeline: React.FC = () => {
   );
 };
 
-export default CustomizedTimeline;

@@ -3,6 +3,8 @@ import { Typography, Box } from '@mui/material';
 
 export const HeaderContainer = styled(Box)(({ theme }) => ({
   width: '100%',
+  textAlign: 'center',
+  padding: theme.spacing(4, 2),
 }));
 
 export const StaticText = styled(Typography)(({ theme }) => ({
@@ -17,7 +19,7 @@ export const NameText = styled(Typography)(({ theme }) => ({
   background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
-  marginBottom: theme.spacing(6),
+  marginBottom: theme.spacing(8),
   margin: 0,
   padding: 0,
 }));
@@ -25,13 +27,17 @@ export const NameText = styled(Typography)(({ theme }) => ({
 export const RoleText = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(3),
   fontWeight: 'normal',
+  fontSize: '1.5rem',
+  color: theme.palette.text.primary,
 }));
 
 export const DynamicTextContainer = styled(Box)(({ theme }) => ({
   height: '3em',
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
   overflow: 'hidden',
+  marginTop: theme.spacing(2),
 }));
 
 export const DynamicText = styled(Typography)(({ theme }) => ({
@@ -39,11 +45,13 @@ export const DynamicText = styled(Typography)(({ theme }) => ({
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   maxWidth: '100%',
+  fontSize: '1.8rem',
+  fontWeight: '500',
 }));
 
 export const BlinkingCursor = styled(Box)(({ theme }) => ({
   width: '2px',
-  height: '1em',
+  height: '1.8rem',
   backgroundColor: theme.palette.secondary.main,
   marginLeft: theme.spacing(1),
   animation: 'blink 0.7s infinite',

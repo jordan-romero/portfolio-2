@@ -133,11 +133,25 @@ export function Nav() {
 export function CopyEmail({ email }: { email: string }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
+    const done = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
+    };
+    try {
+      await navigator.clipboard.writeText(email);
+      return done();
     } catch {
+      // Clipboard API blocked or unavailable: fall back to a hidden textarea.
+      const ta = document.createElement("textarea");
+      ta.value = email;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      if (ok) return done();
       window.location.href = `mailto:${email}`;
     }
   };

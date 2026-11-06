@@ -36,7 +36,7 @@ export const highlights: Highlight[] = [
     kicker: "Realtime",
     title: "AI voice practice",
     body: "The live call and skill-drill experience: device checks, speech-to-text that survives bad networks, screen sharing with an AI buyer, recording and multi-language voices.",
-    tags: ["WebSockets", "Deepgram", "ElevenLabs", "React"],
+    tags: ["WebSockets", "Speech-to-text", "AI voices", "React"],
     span: "wide",
   },
   {
@@ -51,7 +51,7 @@ export const highlights: Highlight[] = [
     kicker: "Platform",
     title: "Integrations Center",
     body: "Zoom, Gong, Salesforce, Google Calendar, Outlook and Close CRM, plus the package and entitlement system behind them.",
-    tags: ["Paragon", "Lambda", "Terraform"],
+    tags: ["OAuth", "Lambda", "Terraform"],
   },
   {
     kicker: "Product",
@@ -62,7 +62,7 @@ export const highlights: Highlight[] = [
   {
     kicker: "AI",
     title: "Scoring + coaching",
-    body: "Live-call scoring V2, evidence citations down to the transcript line, Adaptive Difficulty V2, Fact Sheets and the context graph.",
+    body: "Live-call scoring, evidence citations down to the transcript line, Adaptive Difficulty and Fact Sheets for Skills.",
     tags: ["Python", "Prompting", "Evals"],
   },
   {

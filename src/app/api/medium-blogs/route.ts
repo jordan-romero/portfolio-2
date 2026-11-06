@@ -3,7 +3,7 @@ import Parser from "rss-parser";
 
 const parser = new Parser();
 
-export const revalidate = 3600;
+export const revalidate = 600; // new Substack posts show within ~10 minutes
 
 export async function GET() {
   try {

@@ -54,8 +54,8 @@ export default function Home() {
               <a href={site.links.resume} className={s.btn} target="_blank" rel="noopener noreferrer">
                 Résumé <span aria-hidden>↓</span>
               </a>
-              <a href={`mailto:${site.email}`} className={s.btnGhost}>
-                Say hi
+              <a href={site.links.studio} className={s.btnGhost} target="_blank" rel="noopener noreferrer">
+                Hire me ↗
               </a>
               <a href={site.links.linkedin} className={s.iconBtn} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden>
@@ -174,7 +174,7 @@ export default function Home() {
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={i * 0.08} className={p.featured ? s.projectFeatured : s.projectPlain}>
                 <a href={p.href} target="_blank" rel="noopener noreferrer" className={s.project} data-glow>
-                  {p.featured && <span className={s.badge}>Side project · 2026</span>}
+                  {p.badge && <span className={s.badge}>{p.badge}</span>}
                   <h3 className={s.projectName}>{p.name}</h3>
                   <p className={s.projectBlurb}>{p.blurb}</p>
                   <div className={s.tags}>
@@ -225,6 +225,13 @@ export default function Home() {
             <a href={`mailto:${site.email}`} className={s.contactEmail}>
               {site.email}
             </a>
+            <p className={s.contactNote}>
+              Have a project in mind? My studio,{" "}
+              <a href={site.links.studio} target="_blank" rel="noopener noreferrer" className={s.inlineLink}>
+                Common Tongue
+              </a>
+              , takes on a few builds at a time.
+            </p>
             <div className={s.ctas}>
               <CopyEmail email={site.email} />
               <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer" className={s.btnGhost}>

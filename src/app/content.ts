@@ -4,13 +4,14 @@ export const site = {
   company: "Luster",
   location: "Austin, TX",
   email: "jordan.t.romero@gmail.com",
-  url: "https://portfolio-jordan-romeros-projects.vercel.app",
+  url: "https://jordantromero.com",
   links: {
     github: "https://github.com/jordan-romero",
     githubWork: "https://github.com/jordan-luster",
     linkedin: "https://www.linkedin.com/in/jordan-t-romero/",
     medium: "https://jordan-t-romero.medium.com/",
     resume: "/Jordan-Romero-Resume.pdf",
+    studio: "https://commontongue.dev",
   },
 };
 
@@ -75,13 +76,24 @@ export const highlights: Highlight[] = [
 
 export const projects = [
   {
+    name: "Common Tongue",
+    blurb:
+      "My software studio. Websites, AI features and full product builds for small teams, plus the docs and training that make sure people actually use them.",
+    tags: ["Studio", "Websites", "AI features", "Product builds", "Launch docs"],
+    href: "https://commontongue.dev",
+    cta: "Work with me",
+    featured: true,
+    badge: "Now booking",
+  },
+  {
     name: "Hearth",
     blurb:
       "A Discord bot and web app that gives a D&D campaign a memory you can talk to, filtered so every player only learns what their character knows.",
     tags: ["TypeScript", "Turborepo", "Supabase + pgvector", "Claude agents", "Live transcription"],
     href: "https://hearth-nine-woad.vercel.app",
     cta: "Open Hearth",
-    featured: true,
+    featured: false,
+    badge: "Side project",
   },
   {
     name: "ActingAccents.com",
@@ -91,6 +103,7 @@ export const projects = [
     href: "https://www.actingaccents.com",
     cta: "Visit site",
     featured: false,
+    badge: "Client work",
   },
 ];
 

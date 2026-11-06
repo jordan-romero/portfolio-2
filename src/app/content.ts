@@ -9,7 +9,7 @@ export const site = {
     github: "https://github.com/jordan-romero",
     githubWork: "https://github.com/jordan-luster",
     linkedin: "https://www.linkedin.com/in/jordan-t-romero/",
-    medium: "https://jordan-t-romero.medium.com/",
+    medium: "https://jordantromero.substack.com/",
     resume: "/Jordan-Romero-Resume.pdf",
     studio: "https://commontongue.dev",
   },

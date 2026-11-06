@@ -42,16 +42,16 @@ export const CallingCard = () => {
             Jordan Romero
           </Typography>
           <Typography variant="h6" sx={{ color: "text.secondary" }}>
-            Senior Full Stack Developer
+            Senior Software Engineer
           </Typography>
           <Typography
             variant="body1"
             sx={{ marginTop: 1, maxWidth: 400, color: "text.secondary" }}
           >
-            💻 Full-Stack Developer with 4 years of experience building scalable,
-            maintainable web applications. Skilled in React, Node.js, and GraphQL,
-            I thrive in fast-paced environments, creating impactful solutions that
-            deliver real-world value.
+            💻 Full-stack engineer with 5+ years of experience, now shipping AI
+            product end to end at Luster. Skilled in TypeScript, React, Node.js,
+            Python and AWS, and the person who makes sure a feature makes sense
+            to the people using and selling it.
           </Typography>
         </Box>
       </Box>

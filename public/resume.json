@@ -5,26 +5,74 @@
     "phone": "512-348-0227",
     "email": "jordan.t.romero@gmail.com",
     "links": {
-      "github": "https://github.com/your-profile",
-      "medium": "https://medium.com/your-profile",
-      "linkedin": "https://linkedin.com/in/your-profile"
+      "github": "https://github.com/jordan-romero",
+      "medium": "https://jordan-t-romero.medium.com/",
+      "linkedin": "https://www.linkedin.com/in/jordan-t-romero/"
     }
   },
-  "summary": "An observant and innovative software engineer with a proven ability to deliver efficient and user-focused solutions. Boasts strong practical programming skills, effective communication, and robust project management capabilities, fostering productive work environments and team-centric projects. Committed to continuous learning, UI/UX design, and adopting the latest technologies to drive advancements in software development.",
+  "summary": "Senior full-stack engineer with 5+ years building product at startups, now shipping AI features end to end at Luster. I own work from design session to production flag across TypeScript/React UI, Node and Python services, LLM scoring and Terraform-managed AWS infrastructure, and I bridge engineering and go-to-market through release notes, help docs and product training.",
   "skills": {
     "topSkills": [
-      { "name": "JavaScript", "level": 90 },
-      { "name": "React", "level": 85 },
-      { "name": "Node.js", "level": 80 },
-      { "name": "Next.js", "level": 80 },
-      { "name": "TypeScript", "level": 80 },
-      { "name": "GraphQL", "level": 80 },
-      { "name": "Material-UI", "level": 85 },
-      { "name": "PostgreSQL", "level": 80 },
-      { "name": "Playwright", "level": 80 },
-      { "name": "CSS", "level": 90 },
-      { "name": "HTML", "level": 90 },
-      { "name": "GitHub", "level": 90 }
+      {
+        "name": "JavaScript",
+        "level": 90
+      },
+      {
+        "name": "React",
+        "level": 85
+      },
+      {
+        "name": "Node.js",
+        "level": 80
+      },
+      {
+        "name": "Next.js",
+        "level": 80
+      },
+      {
+        "name": "Python",
+        "level": 70
+      },
+      {
+        "name": "AI Agents & LLMs",
+        "level": 85
+      },
+      {
+        "name": "Terraform",
+        "level": 70
+      },
+      {
+        "name": "TypeScript",
+        "level": 80
+      },
+      {
+        "name": "GraphQL",
+        "level": 80
+      },
+      {
+        "name": "Material-UI",
+        "level": 85
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 80
+      },
+      {
+        "name": "Playwright",
+        "level": 80
+      },
+      {
+        "name": "CSS",
+        "level": 90
+      },
+      {
+        "name": "HTML",
+        "level": 90
+      },
+      {
+        "name": "GitHub",
+        "level": 90
+      }
     ],
     "frontend": [
       "JavaScript (ES6)",
@@ -44,24 +92,83 @@
       "Rails",
       "Prisma",
       "Express",
-      "RESTful APIs"
+      "RESTful APIs",
+      "Python"
     ],
-    "database": ["SQLite3", "PostgreSQL", "Supabase", "Firebase"],
-    "testing": ["Jest", "Cypress", "Playwright", "React Testing Library"],
-    "devOps": ["AWS", "EKS", "Docker", "Kubernetes"],
-    "design": ["Figma", "Sketch", "Storybook"],
-    "cicd": ["CircleCI", "GitHub Actions", "Netlify", "Vercel"],
-    "other": ["Auth0", "Retool", "OAuth", "WebSockets"]
+    "database": [
+      "SQLite3",
+      "PostgreSQL",
+      "Supabase",
+      "Firebase",
+      "DynamoDB"
+    ],
+    "testing": [
+      "Jest",
+      "Cypress",
+      "Playwright",
+      "React Testing Library"
+    ],
+    "devOps": [
+      "AWS (Lambda, Step Functions, S3, EKS)",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Datadog"
+    ],
+    "design": [
+      "Figma",
+      "Sketch",
+      "Storybook"
+    ],
+    "cicd": [
+      "CircleCI",
+      "GitHub Actions",
+      "Netlify",
+      "Vercel"
+    ],
+    "other": [
+      "Auth0",
+      "Retool",
+      "OAuth",
+      "WebSockets"
+    ],
+    "ai": [
+      "LLM scoring and extraction",
+      "Agentic workflows",
+      "MCP servers",
+      "Claude API",
+      "OpenAI API",
+      "ElevenLabs",
+      "Deepgram"
+    ]
   },
   "experience": [
     {
+      "company": "Luster",
+      "role": "Senior Software Engineer",
+      "duration": "January 2025 - Present",
+      "highLevelDescription": "Shipping AI features end to end on Luster's AI practice and coaching platform for sales teams, and bridging engineering with CS and Sales.",
+      "detailedDescription": "I own features from design session to production flag across the React/TypeScript web app, the Node API, Python AI services and Terraform-managed AWS infrastructure.",
+      "responsibilities": [
+        "Engineering owner for Adaptive Difficulty V2: practice difficulty that levels up or down from recent scorecards across practice calls, skill drills and live calls.",
+        "Built in-app Skill Drill management (create, edit, clone, assign, publish) and shipped Skill Drills 1.5 with per-round audio for every customer.",
+        "Delivered manual live-call transcript upload with an LLM speaker-identification formatter, and hardened ingestion with fair queuing, separate scoring and ingestion worker pools and resumable uploads.",
+        "Built Google and Outlook calendar integration, Close CRM dialer ingestion, the interactive Diagnostics report and a manager skill heatmap.",
+        "Leading Fact Sheets for Skills (fact and compliance checks in scoring) and the context graph, the evidence layer behind Luster's AI features.",
+        "Built the team's AI-native engineering tooling: automated PR review, epic planning agents and a shared knowledge base.",
+        "Own release notes, help-center articles, launch emails and the monthly Product Enablement training for CS and Sales."
+      ],
+      "projects": []
+    },
+    {
       "company": "Resilia",
       "role": "Senior Software Engineer",
-      "duration": "June 2022 - Present",
+      "duration": "July 2022 - December 2024",
       "highLevelDescription": "Spearheaded development and design efforts across Resilia's platform, delivering high-impact solutions using a modern tech stack.",
       "responsibilities": [
         "Spearheaded development projects utilizing a comprehensive tech stack: React, TypeScript, Node.js, GraphQL, Prisma, PostgreSQL, and Auth0, significantly enhancing platform capabilities and user experience.",
         "Architected and implemented microservices-based solutions, leveraging AWS services and Amazon EKS (Elastic Kubernetes Service) to improve scalability and maintainability of the platform.",
+        "Led the AI and DevEx guilds, bringing LLM tooling (Anthropic, Freeplay) into team workflows and the product.",
         "Played a key role in building and implementing the funder platform, a critical component of Resilia's offering, demonstrating ability to deliver complex, high-impact features.",
         "Contributed to every aspect of the Resilia platform, touching and improving various features across the entire system, showcasing deep understanding and versatility.",
         "Collaborated closely with product and design teams to expedite feature rollouts and troubleshoot issues, improving project delivery times and cross-functional teamwork.",
@@ -121,7 +228,7 @@
           "image": "/images/knock-guaranteed-offer.png"
         }
       ]
-    }, 
+    },
     {
       "company": "ActingAccents.com",
       "role": "Founding Software Engineer - Freelance",
@@ -148,7 +255,19 @@
           "image": "/images/online-dialect-course.png"
         }
       ]
+    },
+    {
+      "company": "Hearth",
+      "role": "Creator - Side Project",
+      "duration": "2026 - Present",
+      "highLevelDescription": "A Discord bot and web app that gives a D&D campaign a permission-filtered memory you can talk to.",
+      "detailedDescription": "Players and the DM ask questions about the campaign and get answers filtered to what each character actually knows. Built as a TypeScript monorepo with Claude agents for extraction, classification and retrieval.",
+      "responsibilities": [
+        "Designed the fog-of-war permission model that filters every answer to what a character knows.",
+        "Built live session capture and transcription, NPC generation and a campaign web app (ask, codex, journal, DM library, corrections, sharing).",
+        "Stack: TypeScript, pnpm + Turborepo, Next.js on Vercel, Discord.js, Supabase Postgres + pgvector, Prisma, pg-boss, Anthropic SDK."
+      ],
+      "projects": []
     }
-    
   ]
 }

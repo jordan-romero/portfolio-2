@@ -18,7 +18,7 @@ export const HeadShot = () => {
         priority
       />
       <Link
-        href='https://docs.google.com/document/d/1_aRGytxp0SVRVtSgKkfmUgbmXqN348sa3trcvu1cxE8/edit?usp=sharing'
+        href='/Jordan-Romero-Resume.pdf'
         passHref
         target='_blank'
       >

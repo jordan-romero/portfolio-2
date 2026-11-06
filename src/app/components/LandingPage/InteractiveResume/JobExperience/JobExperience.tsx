@@ -27,6 +27,7 @@ type JobExperienceProps = {
     loomUrl?: string;
     image?: string;
   }[];
+  link?: { label: string; url: string };
 };
 
 export const JobExperience = ({
@@ -37,6 +38,7 @@ export const JobExperience = ({
   detailedDescription,
   responsibilities,
   projects,
+  link,
 }: JobExperienceProps) => {
   // State to control the AI Summary Modal visibility
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -96,6 +98,13 @@ export const JobExperience = ({
           <Typography variant="body2" sx={{ marginTop: 1 }} gutterBottom>
             {highLevelDescription}
           </Typography>
+          {link && (
+            <Typography variant="body2" gutterBottom>
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </Typography>
+          )}
         </Box>
       </Box>
 

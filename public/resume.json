@@ -5,26 +5,74 @@
     "phone": "512-348-0227",
     "email": "jordan.t.romero@gmail.com",
     "links": {
-      "github": "https://github.com/your-profile",
-      "medium": "https://medium.com/your-profile",
-      "linkedin": "https://linkedin.com/in/your-profile"
+      "github": "https://github.com/jordan-romero",
+      "medium": "https://jordan-t-romero.medium.com/",
+      "linkedin": "https://www.linkedin.com/in/jordan-t-romero/"
     }
   },
-  "summary": "An observant and innovative software engineer with a proven ability to deliver efficient and user-focused solutions. Boasts strong practical programming skills, effective communication, and robust project management capabilities, fostering productive work environments and team-centric projects. Committed to continuous learning, UI/UX design, and adopting the latest technologies to drive advancements in software development.",
+  "summary": "Senior full-stack engineer with 5+ years building product at startups, now shipping AI features end to end at Luster. I own work from design session to production flag across TypeScript/React UI, Node and Python services, LLM scoring and Terraform-managed AWS infrastructure, and I bridge engineering and go-to-market through release notes, help docs and product training.",
   "skills": {
     "topSkills": [
-      { "name": "JavaScript", "level": 90 },
-      { "name": "React", "level": 85 },
-      { "name": "Node.js", "level": 80 },
-      { "name": "Next.js", "level": 80 },
-      { "name": "TypeScript", "level": 80 },
-      { "name": "GraphQL", "level": 80 },
-      { "name": "Material-UI", "level": 85 },
-      { "name": "PostgreSQL", "level": 80 },
-      { "name": "Playwright", "level": 80 },
-      { "name": "CSS", "level": 90 },
-      { "name": "HTML", "level": 90 },
-      { "name": "GitHub", "level": 90 }
+      {
+        "name": "JavaScript",
+        "level": 90
+      },
+      {
+        "name": "React",
+        "level": 85
+      },
+      {
+        "name": "Node.js",
+        "level": 80
+      },
+      {
+        "name": "Next.js",
+        "level": 80
+      },
+      {
+        "name": "Python",
+        "level": 70
+      },
+      {
+        "name": "AI Agents & LLMs",
+        "level": 85
+      },
+      {
+        "name": "Terraform",
+        "level": 70
+      },
+      {
+        "name": "TypeScript",
+        "level": 80
+      },
+      {
+        "name": "GraphQL",
+        "level": 80
+      },
+      {
+        "name": "Material-UI",
+        "level": 85
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 80
+      },
+      {
+        "name": "Playwright",
+        "level": 80
+      },
+      {
+        "name": "CSS",
+        "level": 90
+      },
+      {
+        "name": "HTML",
+        "level": 90
+      },
+      {
+        "name": "GitHub",
+        "level": 90
+      }
     ],
     "frontend": [
       "JavaScript (ES6)",
@@ -44,29 +92,93 @@
       "Rails",
       "Prisma",
       "Express",
-      "RESTful APIs"
+      "RESTful APIs",
+      "Python"
     ],
-    "database": ["SQLite3", "PostgreSQL", "Supabase", "Firebase"],
-    "testing": ["Jest", "Cypress", "Playwright", "React Testing Library"],
-    "devOps": ["AWS", "EKS", "Docker", "Kubernetes"],
-    "design": ["Figma", "Sketch", "Storybook"],
-    "cicd": ["CircleCI", "GitHub Actions", "Netlify", "Vercel"],
-    "other": ["Auth0", "Retool", "OAuth", "WebSockets"]
+    "database": [
+      "SQLite3",
+      "PostgreSQL",
+      "Supabase",
+      "Firebase",
+      "DynamoDB"
+    ],
+    "testing": [
+      "Jest",
+      "Cypress",
+      "Playwright",
+      "React Testing Library"
+    ],
+    "devOps": [
+      "AWS (Lambda, Step Functions, S3, EKS)",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Datadog"
+    ],
+    "design": [
+      "Figma",
+      "Sketch",
+      "Storybook"
+    ],
+    "cicd": [
+      "CircleCI",
+      "GitHub Actions",
+      "Netlify",
+      "Vercel"
+    ],
+    "other": [
+      "Auth0",
+      "Retool",
+      "OAuth",
+      "WebSockets"
+    ],
+    "ai": [
+      "LLM scoring and extraction",
+      "Agentic workflows",
+      "MCP servers",
+      "Claude API",
+      "OpenAI API",
+      "ElevenLabs",
+      "Deepgram"
+    ]
   },
   "experience": [
     {
+      "company": "Luster",
+      "role": "Senior Software Engineer",
+      "duration": "January 2025 - Present",
+      "highLevelDescription": "Shipping AI product end to end on Luster's AI practice and coaching platform for sales teams: 750+ merged PRs across web, API, AI core and infrastructure since January 2025.",
+      "detailedDescription": "I own features from design session to production flag across the React/TypeScript web app, the Node API, Python AI services and Terraform-managed AWS infrastructure.",
+      "responsibilities": [
+        "Real-time AI voice practice: audio device checks and switching, speech-to-text resilience (reconnect and retry, WebSocket keepalive, keyword boosting), screen sharing during AI calls, session recording and multi-language voices.",
+        "Integrations Center and package/feature entitlements: Zoom, Gong and Salesforce through Paragon, Google Calendar (webhook, polling and watch-lifecycle Lambdas), Outlook, and Close CRM dialer ingestion.",
+        "Weekly Insights pipeline: Step Functions, EventBridge and Lambdas generating AI individual, team and executive summaries with practice recommendations, Freeplay LLM logging, and SendGrid emails with team alerts and deep links.",
+        "Practice design: personalized post-session challenges, custom call types on a new conversation-type model, skills management with AI-assisted skill authoring, Certification mode and Dress Rehearsals.",
+        "Scoring and coaching: live-call scoring V2, practice scoring upgrades, skill-level evidence citations, manager comments, Focus this week, Diagnostics and a skill heatmap.",
+        "2026 roadmap: engineering owner for Adaptive Difficulty V2, Skill Drill management and Skill Drills 1.5, and Live Calls for All; leading Fact Sheets for Skills and the context graph.",
+        "Cleared high-severity findings for the annual compliance audit and drove a no-PII-in-logs standard across every repo.",
+        "Built the team's AI-native engineering tooling: automated PR review, epic planning agents and a shared knowledge base.",
+        "Own release notes, help-center articles, launch emails and the monthly Product Enablement training for CS and Sales."
+      ],
+      "projects": [],
+      "link": {
+        "label": "See my Luster contributions on GitHub (jordan-luster)",
+        "url": "https://github.com/jordan-luster"
+      }
+    },
+    {
       "company": "Resilia",
       "role": "Senior Software Engineer",
-      "duration": "June 2022 - Present",
-      "highLevelDescription": "Spearheaded development and design efforts across Resilia's platform, delivering high-impact solutions using a modern tech stack.",
+      "duration": "July 2022 - December 2024",
+      "highLevelDescription": "Built the Funder Platform, goals and impact tools, and insight dashboards for a platform that helps nonprofits and their funders build capacity and measure impact; led the AI and DevEx guilds.",
       "responsibilities": [
-        "Spearheaded development projects utilizing a comprehensive tech stack: React, TypeScript, Node.js, GraphQL, Prisma, PostgreSQL, and Auth0, significantly enhancing platform capabilities and user experience.",
-        "Architected and implemented microservices-based solutions, leveraging AWS services and Amazon EKS (Elastic Kubernetes Service) to improve scalability and maintainability of the platform.",
-        "Played a key role in building and implementing the funder platform, a critical component of Resilia's offering, demonstrating ability to deliver complex, high-impact features.",
-        "Contributed to every aspect of the Resilia platform, touching and improving various features across the entire system, showcasing deep understanding and versatility.",
-        "Collaborated closely with product and design teams to expedite feature rollouts and troubleshoot issues, improving project delivery times and cross-functional teamwork.",
-        "Mentored junior developers, promoting best practices in modern web development, cloud architecture, and fostering a culture of continuous learning and improvement.",
-        "Implemented robust error handling and logging systems to enhance application reliability in a distributed microservices environment."
+        "Funder Platform: key engineer designing and building the funder-facing product so donors and funders can support nonprofit projects, track progress and measure impact, including the Funder Goals page.",
+        "Rebuilt Impact Goals so nonprofits can set, track and hit measurable outcomes, and built the collaborative goal experience shared between nonprofits and funders, with analytics on dashboard actions.",
+        "Shipped an Executive Dashboard with real-time reporting, a Needs Assessment for evaluating organizational needs, and an in-app survey tool for live user feedback.",
+        "Added error handling and logging across microservices and contributed to performance, scalability and security work.",
+        "Led the AI and DevEx guilds, bringing LLM tooling (Anthropic, Freeplay) into the product and team workflows.",
+        "Introduced Playwright end-to-end testing across browsers and mentored junior developers on code quality and testing.",
+        "Partnered with product and design in sprint planning, standups and retros to speed up rollouts."
       ],
       "projects": [
         {
@@ -93,21 +205,21 @@
           "loomUrl": "https://www.loom.com/share/d36f631d540642f38ef5e866f13e952c",
           "image": "/images/needs-assessment.png"
         }
-      ]
+      ],
+      "detailedDescription": "Worked across every part of the platform in React, TypeScript, Node.js, GraphQL, Prisma, PostgreSQL and Auth0, on microservices in AWS EKS."
     },
     {
       "company": "Knock",
       "role": "Software Engineer",
       "duration": "April 2021 - March 2022",
-      "highLevelDescription": "Developed responsive, scalable UI and optimized app performance in a fast-paced, start-up environment.",
+      "highLevelDescription": "Built the web and mobile customer dashboard and launched the Guaranteed Offer product for a startup that lets people buy their next home before selling their current one.",
       "responsibilities": [
-        "Utilized strong practical programming skills to build products quickly and efficiently in a high-paced, start-up environment.",
-        "Worked closely across teams to produce quality, responsive UI with React and React Native.",
-        "Implemented and analyzed A/B tests to optimize user experience and inform product decisions.",
-        "Led the development and successful launch of a new product within a two-week timeframe, demonstrating ability to deliver under tight deadlines.",
-        "Developed and launched key product features, contributing to improved user retention.",
-        "Optimized API integration to enhance app performance and reduce load times.",
-        "Collaborated with UX/UI designers to implement responsive designs, improving mobile user experience."
+        "Built the consumer dashboard for web and mobile with React and React Native, with real-time data sync across devices, data visualizations and user-specific metrics.",
+        "Led development of the Guaranteed Offer product release and shipped every web update and launch asset in two weeks.",
+        "Rebuilt the marketing website to brand standards with responsive design and SEO (metadata, content structure, URL patterns).",
+        "Ran A/B tests on key dashboard features to lift engagement and conversion.",
+        "Integrated REST APIs and third-party services and cut load times by optimizing API calls.",
+        "Worked with product managers and UX/UI designers to turn business requirements into polished features."
       ],
       "projects": [
         {
@@ -120,8 +232,9 @@
           "description": "Led the development and release of the 'Guaranteed Offer' product. Delivered all marketing materials, web updates, and product launch elements within two weeks.",
           "image": "/images/knock-guaranteed-offer.png"
         }
-      ]
-    }, 
+      ],
+      "detailedDescription": "React and React Native across web and mobile, with Zustand state management, real-time data sync and REST API integrations."
+    },
     {
       "company": "ActingAccents.com",
       "role": "Founding Software Engineer - Freelance",
@@ -148,7 +261,23 @@
           "image": "/images/online-dialect-course.png"
         }
       ]
+    },
+    {
+      "company": "Hearth",
+      "role": "Creator - Side Project",
+      "duration": "2026 - Present",
+      "highLevelDescription": "A Discord bot and web app that gives a D&D campaign a permission-filtered memory you can talk to.",
+      "detailedDescription": "Players and the DM ask questions about the campaign and get answers filtered to what each character actually knows. Built as a TypeScript monorepo with Claude agents for extraction, classification and retrieval.",
+      "responsibilities": [
+        "Designed the fog-of-war permission model that filters every answer to what a character knows.",
+        "Built live session capture and transcription, NPC generation and a campaign web app (ask, codex, journal, DM library, corrections, sharing).",
+        "Stack: TypeScript, pnpm + Turborepo, Next.js on Vercel, Discord.js, Supabase Postgres + pgvector, Prisma, pg-boss, Anthropic SDK."
+      ],
+      "projects": [],
+      "link": {
+        "label": "Live app",
+        "url": "https://hearth-nine-woad.vercel.app"
+      }
     }
-    
   ]
 }

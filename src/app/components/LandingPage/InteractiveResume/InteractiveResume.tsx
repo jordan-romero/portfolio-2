@@ -24,6 +24,7 @@ type ResumeData = {
     highLevelDescription: string;
     detailedDescription: string;
     responsibilities: string[];
+    link?: { label: string; url: string };
     projects: {
       name: string;
       description: string;
@@ -83,6 +84,7 @@ export const InteractiveResume = () => {
               detailedDescription={job.detailedDescription}
               responsibilities={job.responsibilities}
               projects={job.projects}
+              link={job.link}
             />
           ))}
         </Grid>

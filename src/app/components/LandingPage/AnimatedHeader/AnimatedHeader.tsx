@@ -22,7 +22,7 @@ export const AnimatedHeader = () => {
   const staticText = 'Hello. My name is';
   const name = 'Jordan Romero';
   const roleText = 'I am a';
-  const role = '<Full Stack Developer />';
+  const role = '<Senior Software Engineer />';
   const dynamicPrefix = 'I believe in';
   const dynamicWords = [
     'adaptability',

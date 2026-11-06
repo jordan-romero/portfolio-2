@@ -210,6 +210,9 @@ export default function Home() {
           <SectionHead index="04" label="Writing" title={<>Notes from <em>the work</em></>} />
           <Reveal>
             <Writing mediumUrl={site.links.medium} />
+            <a href={site.links.medium} target="_blank" rel="noopener noreferrer" className={s.textLink}>
+              Subscribe to The Empathic Engineer ↗
+            </a>
           </Reveal>
         </section>
 
@@ -241,7 +244,7 @@ export default function Home() {
                 GitHub ↗
               </a>
               <a href={site.links.medium} target="_blank" rel="noopener noreferrer" className={s.btnGhost}>
-                Medium ↗
+                Substack ↗
               </a>
             </div>
           </Reveal>

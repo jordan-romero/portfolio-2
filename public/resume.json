@@ -147,7 +147,7 @@
       "company": "Luster",
       "role": "Senior Software Engineer",
       "duration": "January 2025 - Present",
-      "highLevelDescription": "Shipping AI product end to end on Luster's AI practice and coaching platform for sales teams: 750+ merged PRs across web, API, AI core and infrastructure since January 2025.",
+      "highLevelDescription": "Shipping AI product end to end on Luster's AI practice and coaching platform for sales teams, across the web app, API, AI core and AWS infrastructure.",
       "detailedDescription": "I own features from design session to production flag across the React/TypeScript web app, the Node API, Python AI services and Terraform-managed AWS infrastructure.",
       "responsibilities": [
         "Real-time AI voice practice: audio device checks and switching, speech-to-text resilience (reconnect and retry, WebSocket keepalive, keyword boosting), screen sharing during AI calls, session recording and multi-language voices.",

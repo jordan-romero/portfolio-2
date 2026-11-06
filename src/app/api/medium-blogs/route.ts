@@ -3,6 +3,8 @@ import Parser from "rss-parser";
 
 const parser = new Parser();
 
+export const revalidate = 3600;
+
 export async function GET() {
   try {
     const mediumFeed = "https://medium.com/feed/@jordan-t-romero"; 

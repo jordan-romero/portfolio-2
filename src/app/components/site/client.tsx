@@ -255,7 +255,7 @@ export function Writing({ mediumUrl }: { mediumUrl: string }) {
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d: Post[]) => {
         if (!Array.isArray(d)) return setPosts([]);
-        // One post per series (Medium returns each "part" separately), newest first.
+        // One post per series (multi-part posts come back separately), newest first.
         const seen = new Set<string>();
         const unique = d.filter((p) => {
           const key = p.title.toLowerCase().replace(/[^a-z ]/g, "").trim();
@@ -276,7 +276,7 @@ export function Writing({ mediumUrl }: { mediumUrl: string }) {
   if (failed || (posts && posts.length === 0)) {
     return (
       <a href={mediumUrl} target="_blank" rel="noopener noreferrer" className={s.textLink}>
-        Read my writing on Medium ↗
+        Read The Empathic Engineer ↗
       </a>
     );
   }

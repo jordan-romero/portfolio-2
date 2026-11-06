@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Jordan Romero · Senior Software Engineer",
     description,
     url: site.url,
-    images: ["/images/headshot.png"],
+    images: ["/images/jordan.png"],
     type: "website",
   },
   twitter: { card: "summary", title: "Jordan Romero", description },

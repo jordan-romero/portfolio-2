@@ -1004,3 +1004,18 @@ a.jobProject:hover {
   0%, 100% { border-color: var(--border); }
   20% { border-color: color-mix(in srgb, var(--accent-2) 70%, transparent); }
 }
+
+/* ---------- Studio feature ---------- */
+.projectFeatured {
+  grid-column: 1 / -1;
+}
+
+.projects {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contactNote {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 22px auto 0;
+}

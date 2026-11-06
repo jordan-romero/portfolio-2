@@ -2,7 +2,6 @@
   "name": "Jordan T. Romero",
   "title": "Senior Software Engineer",
   "contact": {
-    "phone": "512-348-0227",
     "email": "jordan.t.romero@gmail.com",
     "links": {
       "github": "https://github.com/jordan-romero",
@@ -138,8 +137,7 @@
       "MCP servers",
       "Claude API",
       "OpenAI API",
-      "ElevenLabs",
-      "Deepgram"
+      "Speech-to-text and AI voice APIs"
     ]
   },
   "experience": [
@@ -151,12 +149,12 @@
       "detailedDescription": "I own features from design session to production flag across the React/TypeScript web app, the Node API, Python AI services and Terraform-managed AWS infrastructure.",
       "responsibilities": [
         "Real-time AI voice practice: audio device checks and switching, speech-to-text resilience (reconnect and retry, WebSocket keepalive, keyword boosting), screen sharing during AI calls, session recording and multi-language voices.",
-        "Integrations Center and package/feature entitlements: Zoom, Gong and Salesforce through Paragon, Google Calendar (webhook, polling and watch-lifecycle Lambdas), Outlook, and Close CRM dialer ingestion.",
-        "Weekly Insights pipeline: Step Functions, EventBridge and Lambdas generating AI individual, team and executive summaries with practice recommendations, Freeplay LLM logging, and SendGrid emails with team alerts and deep links.",
+        "Integrations Center and package/feature entitlements: Zoom, Gong and Salesforce through an embedded integrations platform, Google Calendar (webhook, polling and watch-lifecycle Lambdas), Outlook, and Close CRM dialer ingestion.",
+        "Weekly Insights pipeline: Step Functions, EventBridge and Lambdas generating AI individual, team and executive summaries with practice recommendations, LLM call logging, and SendGrid emails with team alerts and deep links.",
         "Practice design: personalized post-session challenges, custom call types on a new conversation-type model, skills management with AI-assisted skill authoring, Certification mode and Dress Rehearsals.",
-        "Scoring and coaching: live-call scoring V2, practice scoring upgrades, skill-level evidence citations, manager comments, Focus this week, Diagnostics and a skill heatmap.",
-        "2026 roadmap: engineering owner for Adaptive Difficulty V2, Skill Drill management and Skill Drills 1.5, and Live Calls for All; leading Fact Sheets for Skills and the context graph.",
-        "Cleared high-severity findings for the annual compliance audit and drove a no-PII-in-logs standard across every repo.",
+        "Scoring and coaching: live-call scoring, practice scoring upgrades, skill-level evidence citations, manager comments, Focus this week, Diagnostics and a skill heatmap.",
+        "Recent work: engineering owner for Adaptive Difficulty, Skill Drill management and transcript upload for live calls; led Fact Sheets for Skills.",
+        "Led security hardening ahead of the annual compliance audit and drove a no-PII-in-logs standard across every repo.",
         "Built the team's AI-native engineering tooling: automated PR review, epic planning agents and a shared knowledge base.",
         "Own release notes, help-center articles, launch emails and the monthly Product Enablement training for CS and Sales."
       ],

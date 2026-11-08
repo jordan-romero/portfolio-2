@@ -1,6 +1,6 @@
 export const site = {
   name: "Jordan Romero",
-  role: "Senior Software Engineer",
+  role: "Founding Senior Software Engineer",
   company: "Luster",
   location: "Austin, TX",
   email: "jordan.t.romero@gmail.com",

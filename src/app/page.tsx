@@ -45,7 +45,7 @@ export default function Home() {
             </Reveal>
             <Reveal immediate delay={0.12}>
               <p className={s.lede}>
-                Senior software engineer shipping AI features end to end: realtime voice, LLM pipelines,
+                Founding senior software engineer at Luster, shipping AI features end to end: realtime voice, LLM pipelines,
                 integrations and the infrastructure under them. I came to code from social services, so I
                 care just as much that a feature makes sense to the people using and selling it.
               </p>

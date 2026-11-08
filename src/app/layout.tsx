@@ -16,14 +16,14 @@ const serif = Instrument_Serif({
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 const description =
-  "Jordan Romero is a senior software engineer building AI product end to end at Luster: realtime voice, LLM pipelines, integrations and the agents behind them.";
+  "Jordan Romero is a founding senior software engineer, Luster's first engineering hire, building AI product end to end: realtime voice, LLM pipelines, integrations and the agents behind them.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Jordan Romero · Senior Software Engineer",
+  title: "Jordan Romero · Founding Senior Software Engineer",
   description,
   openGraph: {
-    title: "Jordan Romero · Senior Software Engineer",
+    title: "Jordan Romero · Founding Senior Software Engineer",
     description,
     url: site.url,
     images: ["/images/jordan.png"],
